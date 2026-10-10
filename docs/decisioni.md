@@ -18,6 +18,9 @@
 - **Telemetria di Astro**: disattivata sul computer e nella costruzione su GitHub.
 - **Vercel ricontrollato e confermato escluso**: le sue regole (aggiornate al 14 settembre 2026) riservano il piano gratuito all'uso non commerciale e contano come commerciale anche "pubblicizzare la vendita di un prodotto", quindi un sito che rimanda ad Amazon richiederebbe il piano Pro a pagamento. Si resta su GitHub Pages; l'alternativa gratuita che ammette l'uso commerciale è Cloudflare Pages.
 
+- **Home rifatta** dopo la revisione di Laura: niente disegni colorati in apertura, tutto centrato, in "Come funziona" le quattro pagine delle biglie con i testi del quaderno, carta avorio `#fbf7ee` al posto del bianco puro, tolto "a casa" dagli inviti a stampare.
+- **Pagina da provare**: il soggetto è il tamburello, il gioco con la racchetta di pelle, che non compare in nessun quaderno (era fra le riserve dei giochi, "da chiarire"). Sotto il pulsante per scaricarla, la stessa pagina colorata in tre modi (matite, pennarelli, sfondo decorativo) e il collegamento agli Esempi.
+
 ## Testi da rivedere (proposte di Claude)
 
 - Testi della home, della pagina I quaderni, di Esempi, della Pagina da provare, di Contatti, delle Note legali e della pagina non trovata.
@@ -31,7 +34,9 @@
 - [ ] Laura: rivedere i testi proposti.
 - [ ] Decidere se nelle note legali va indicato chi cura il sito (il nome di Laura o solo la collana).
 - [ ] Immagini delle pagine colorate per la pagina Esempi (preparate da Laura).
-- [ ] PDF della pagina di prova, in formato A4 (preparato da Laura).
+- [ ] PDF della pagina di prova del tamburello, in formato A4 (preparato da Laura).
+- [ ] Tre versioni colorate della pagina del tamburello: matite, pennarelli, sfondo decorativo.
+- [ ] Togliere il tamburello dalle riserve nel foglio Archivio di `Giochi_quattro_quaderni.xlsx` (lo fa Laura: l'Excel è un file di lavoro).
 - [ ] Creare il repository su GitHub e fare il primo push, quando Laura lo chiede.
 - [ ] Attivare GitHub Pages con origine "GitHub Actions".
 - [ ] Collegamenti Amazon dei due volumi, quando sono pubblicati.
