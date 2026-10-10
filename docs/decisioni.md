@@ -16,6 +16,7 @@
 - **Email**: info@lascatoladilatta.it, ricomposto nella pagina da un piccolo script. Senza script compare scritto a parole ("info (chiocciola) lascatoladilatta.it").
 - **Pagine**: home, I quaderni, una pagina per volume, Esempi, Pagina da provare, Contatti, Note legali, Pagina non trovata.
 - **Telemetria di Astro**: disattivata sul computer e nella costruzione su GitHub.
+- **Vercel ricontrollato e confermato escluso**: le sue regole (aggiornate al 14 settembre 2026) riservano il piano gratuito all'uso non commerciale e contano come commerciale anche "pubblicizzare la vendita di un prodotto", quindi un sito che rimanda ad Amazon richiederebbe il piano Pro a pagamento. Si resta su GitHub Pages; l'alternativa gratuita che ammette l'uso commerciale è Cloudflare Pages.
 
 ## Testi da rivedere (proposte di Claude)
 
