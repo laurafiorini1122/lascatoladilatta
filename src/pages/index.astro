@@ -5,8 +5,9 @@ import { volumiInOrdine } from '../volumi';
 import { url } from '../sito';
 
 const volumi = await volumiInOrdine();
-const primo = volumi[0];
-const cartella = url(`/immagini/volumi/${primo.id}`);
+// L'esempio di "Come funziona" sono le quattro pagine delle biglie di
+// Calzoni corti 1, con i testi del quaderno (Excel e PDF di impaginazione).
+const disegno = url('/immagini/volumi/calzoni-corti-1/disegno-600.webp');
 ---
 
 <Base
@@ -14,66 +15,81 @@ const cartella = url(`/immagini/volumi/${primo.id}`);
   descrizione="Quaderni da colorare e da raccontare con gli oggetti dell'Italia degli anni '50 e '60: a destra il disegno, a sinistra le righe per scrivere il ricordo."
   percorso="/"
 >
-  <div class="contenitore">
+  <div class="contenitore centrato">
     <section class="apertura">
-      <div class="testo">
-        <h1>Quaderni da colorare e da raccontare</h1>
-        <p class="introduzione">
-          Ogni quaderno della collana raccoglie quindici oggetti della vita di tutti i giorni
-          nell'Italia degli anni '50 e '60. Per ognuno c'è un disegno da colorare e una pagina
-          per scrivere il ricordo che fa tornare in mente.
-        </p>
-      </div>
-      <div class="coppia" aria-hidden="true">
-        {
-          volumi.slice(0, 2).map((v) => (
-            <img
-              src={url(`/immagini/volumi/${v.id}/copertina-480.webp`)}
-              alt=""
-              width="480"
-              height="600"
-              decoding="async"
-            />
-          ))
-        }
+      <h1>Quaderni da colorare e da raccontare</h1>
+      <p class="introduzione">
+        Ogni quaderno della collana raccoglie quindici oggetti della vita di tutti i giorni
+        nell'Italia degli anni '50 e '60. Per ognuno c'è un disegno da colorare e una pagina
+        per scrivere il ricordo che fa tornare in mente.
+      </p>
+      <div class="pulsanti">
+        <a class="pulsante" href="#i-quaderni">Guarda i quaderni</a>
+        <a class="pulsante secondario" href={url('/prova/')}>Prova una pagina</a>
       </div>
     </section>
 
     <section aria-labelledby="come-funziona">
       <h2 id="come-funziona">Come funziona un quaderno</h2>
-      <figure class="doppia">
-        <div class="pagine" aria-hidden="true">
-          <div class="foglio sinistra">
-            <p class="titoletto">Le biglie</p>
-            <div class="righe"></div>
+      <p class="breve">Ogni oggetto occupa quattro pagine. Qui quelle delle biglie, come sono nel quaderno.</p>
+
+      <div class="doppie">
+        <figure class="doppia">
+          <div class="pagine">
+            <div class="pagina testo-pagina">
+              <p class="p-titolo">Le biglie</p>
+              <p class="p-frase">
+                Il pollice sul vetro, la mira, il rumore secco quando due biglie si toccano. Dove
+                giocavate: in cortile, sul marciapiede, sulla terra battuta davanti a casa? Ne
+                avevi una che non prestavi a nessuno?
+              </p>
+              <p class="p-porta">
+                Se non ne avevi, racconta quelle che tenevi in mano un momento solo e chi te le
+                faceva vedere.
+              </p>
+              <div class="righe" aria-hidden="true"></div>
+              <p class="p-numero" aria-hidden="true">4</p>
+            </div>
+            <div class="pagina pagina-disegno">
+              <img src={disegno} alt="Il disegno delle biglie da colorare." width="600" height="776" loading="lazy" decoding="async" />
+            </div>
           </div>
-          <div class="foglio destra">
-            <img src={`${cartella}/disegno-600.webp`} alt="" width="600" height="776" loading="lazy" decoding="async" />
+          <figcaption>
+            <p><strong>1. Si racconta.</strong> Una frase riporta a quel tempo e lascia le righe per scrivere.</p>
+            <p><strong>2. Si colora.</strong> Il disegno è sempre sulla pagina di destra.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="doppia">
+          <div class="pagine">
+            <div class="pagina" aria-label="Retro del disegno, bianco" role="img"></div>
+            <div class="pagina testo-pagina">
+              <p class="p-tipo">Attività</p>
+              <p class="p-titoletto">La pista</p>
+              <p class="p-frase">
+                Traccia qui la pista che si disegnava per terra, con le buche e la linea di
+                partenza. Metti una crocetta dove stavi tu.
+              </p>
+              <div class="riquadro" aria-hidden="true"></div>
+              <div class="righe righe-corte" aria-hidden="true"></div>
+              <p class="p-numero destra" aria-hidden="true">7</p>
+            </div>
           </div>
-        </div>
-        <figcaption>
-          Una doppia pagina del quaderno: a sinistra il titolo dell'oggetto e le righe per
-          scrivere, a destra il disegno delle biglie da colorare.
-        </figcaption>
-      </figure>
-      <div class="testo">
-        <p>
-          A destra si colora, a sinistra si racconta. Sulla pagina di sinistra una frase riporta
-          a quel tempo e lascia le righe per scrivere. Dopo ogni disegno c'è una pagina con una
-          filastrocca, un nome, una fotografia o un piccolo gioco.
-        </p>
-        <p>
-          Si può cominciare da qualsiasi pagina e scrivere da soli oppure raccontare a qualcuno
-          che scrive. Il retro dei disegni è bianco, così si possono usare anche i pennarelli.
-        </p>
-        <p>
-          Pagina dopo pagina il quaderno diventa un libro di ricordi da tenere, da colorare
-          anche insieme ai nipoti.
-        </p>
+          <figcaption>
+            <p><strong>3. Il retro resta bianco.</strong> Così si possono usare anche i pennarelli.</p>
+            <p><strong>4. Il ricordo continua.</strong> Una filastrocca, un nome, una fotografia o un piccolo gioco.</p>
+          </figcaption>
+        </figure>
       </div>
+
+      <p class="breve">
+        Si può cominciare da qualsiasi pagina e scrivere da soli oppure raccontare a qualcuno
+        che scrive. Pagina dopo pagina il quaderno diventa un libro di ricordi da tenere, da
+        colorare anche insieme ai nipoti.
+      </p>
     </section>
 
-    <section aria-labelledby="i-quaderni">
+    <section aria-labelledby="i-quaderni" id="quaderni">
       <h2 id="i-quaderni">I quaderni</h2>
       <div class="volumi">
         {volumi.map((volume) => <SchedaVolume volume={volume} />)}
@@ -82,83 +98,154 @@ const cartella = url(`/immagini/volumi/${primo.id}`);
 
     <section aria-labelledby="prima-di-scegliere">
       <h2 id="prima-di-scegliere">Prima di scegliere</h2>
-      <div class="testo">
-        <p>
-          Puoi guardare <a href={url('/esempi/')}>alcune pagine già colorate</a> oppure
-          scaricare <a href={url('/prova/')}>una pagina da provare</a>, stamparla e colorarla.
-        </p>
+      <p class="breve">
+        Guarda alcune pagine già colorate oppure scarica una pagina da provare, stampala e
+        colorala.
+      </p>
+      <div class="pulsanti">
+        <a class="pulsante" href={url('/esempi/')}>Esempi di pagine colorate</a>
+        <a class="pulsante secondario" href={url('/prova/')}>Pagina da provare</a>
       </div>
     </section>
   </div>
 </Base>
 
 <style>
+  .centrato {
+    text-align: center;
+  }
+  section + section {
+    margin-top: 5rem;
+  }
   .apertura {
-    display: grid;
-    gap: 2rem;
-    align-items: center;
-    grid-template-columns: 1.3fr 1fr;
+    max-width: 38rem;
+    margin: 1.5rem auto 0;
   }
-  .coppia {
+  .apertura h1 {
+    font-size: clamp(2.2rem, 7vw, 2.8rem);
+  }
+  .apertura .introduzione {
+    margin-bottom: 1.75rem;
+  }
+  .breve {
+    max-width: 32rem;
+    margin-inline: auto;
+  }
+
+  /* Le quattro pagine delle biglie, in due doppie pagine */
+  .doppie {
     display: flex;
-    gap: 1.5rem;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-end;
-  }
-  .coppia img {
-    width: 45%;
-    max-height: 20rem;
-    object-fit: contain;
+    gap: 2.5rem 3rem;
+    margin: 2rem 0 2.5rem;
   }
   .doppia {
-    margin: 0 0 2rem;
-    max-width: 36rem;
+    margin: 0;
+    width: min(100%, 30rem);
   }
   .pagine {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    box-shadow: 0 2px 8px rgb(43 38 33 / 0.14);
+    /* le misure in cqw dentro le pagine sono in centesimi della doppia pagina */
+    container-type: inline-size;
   }
-  .pagine .foglio {
+  .pagina {
     aspect-ratio: 8.5 / 11;
-    padding: 9% 9% 6%;
+    background: var(--carta);
+    border: 1px solid #d8ccb2;
   }
-  .sinistra {
-    border-right: none;
+  .pagina + .pagina {
+    border-left-color: #c9bda4;
   }
-  .titoletto {
+  .testo-pagina {
+    display: flex;
+    flex-direction: column;
+    padding: 5cqw 4cqw 2.5cqw;
+    text-align: left;
+    line-height: 1.45;
+  }
+  .testo-pagina p {
+    margin: 0 0 1.75cqw;
+  }
+  .p-titolo {
     font-weight: 700;
-    font-size: clamp(0.8rem, 2.6vw, 1.3rem);
-    margin: 0 0 8%;
+    font-size: 3.7cqw;
+    line-height: 1.2;
+  }
+  .p-frase {
+    font-size: 2.4cqw;
+  }
+  .p-porta {
+    font-size: 2.25cqw;
+    font-style: italic;
+  }
+  .p-tipo {
+    font-size: 1.6cqw;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .p-titoletto {
+    font-weight: 700;
+    font-size: 3.2cqw;
+    text-align: center;
+  }
+  .p-numero {
+    font-size: 1.6cqw;
+    margin: 0 !important;
+  }
+  .p-numero.destra {
+    text-align: right;
   }
   .righe {
-    height: 70%;
+    flex: 1;
     background: repeating-linear-gradient(
       to bottom,
       transparent 0,
-      transparent calc(10% - 2px),
-      var(--rigo) calc(10% - 2px),
-      var(--rigo) 10%
+      transparent 3.9cqw,
+      var(--rigo) 3.9cqw,
+      var(--rigo) calc(3.9cqw + 1px)
     );
   }
-  .destra {
+  .righe-corte {
+    flex: 0 0 8cqw;
+  }
+  .riquadro {
+    flex: 1;
+    border: 1.5px solid var(--testo);
+    border-radius: 1.25cqw;
+    margin-bottom: 1cqw;
+  }
+  .pagina-disegno {
     display: grid;
     place-items: center;
+    padding: 3cqw;
+  }
+  .pagina-disegno img {
+    mix-blend-mode: multiply;
   }
   .doppia figcaption {
-    font-style: italic;
-    margin-top: 0.75rem;
+    display: flex;
+    gap: 1.25rem;
+    margin-top: 1rem;
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
+  .doppia figcaption p {
+    flex: 1;
+    margin: 0;
+  }
+
   .volumi {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr));
+    margin-top: 2rem;
   }
-  @media (max-width: 48rem) {
-    .apertura {
-      grid-template-columns: 1fr;
-    }
-    .coppia img {
-      max-height: 13rem;
-    }
+  .volumi > :global(*) {
+    flex: 0 1 21rem;
   }
 </style>

@@ -17,34 +17,40 @@ const cartella = url(`/immagini/volumi/${id}`);
   <img
     src={`${cartella}/copertina-480.webp`}
     srcset={`${cartella}/copertina-480.webp 480w, ${cartella}/copertina-960.webp 960w`}
-    sizes="(min-width: 50rem) 16rem, 60vw"
+    sizes="12rem"
     alt={data.immagini.copertina.alt}
     loading="lazy"
     decoding="async"
   />
-  <div>
-    <Titolo><a href={url(`/quaderni/${id}/`)}>{data.titolo}</a></Titolo>
-    <p>{data.sottotitolo}</p>
-    <p class="stato">{data.amazon ? 'Disponibile su Amazon' : 'Presto su Amazon'}</p>
-  </div>
+  <Titolo><a href={url(`/quaderni/${id}/`)}>{data.titolo}</a></Titolo>
+  <p>{data.sottotitolo}</p>
+  <p class="stato">{data.amazon ? 'Disponibile su Amazon' : 'Presto su Amazon'}</p>
 </article>
 
 <style>
   .scheda {
-    display: grid;
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    grid-template-columns: minmax(8rem, 14rem) 1fr;
+    text-align: center;
     background: var(--carta);
     border: 2px solid var(--testo);
     border-radius: 8px;
-    padding: 1.5rem;
+    padding: 1.75rem 1.5rem;
     position: relative;
   }
   .scheda img {
-    max-height: 18rem;
+    height: 11rem;
     width: auto;
-    margin-inline: auto;
+    margin-bottom: 1.25rem;
+  }
+  .scheda :is(h2, h3) {
+    margin: 0 0 0.5rem;
+    font-size: 1.4rem;
+  }
+  .scheda p {
+    margin: 0 0 0.5rem;
+    font-size: 0.95rem;
   }
   /* tutta la tessera è cliccabile, ma il collegamento resta uno solo */
   .scheda a::after {
@@ -68,14 +74,6 @@ const cartella = url(`/immagini/volumi/${id}`);
   .stato {
     font-weight: 700;
     color: var(--rosso);
-    margin: 0;
-  }
-  @media (max-width: 34rem) {
-    .scheda {
-      grid-template-columns: 1fr;
-    }
-    .scheda img {
-      max-height: 14rem;
-    }
+    margin: 0 !important;
   }
 </style>

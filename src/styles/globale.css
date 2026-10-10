@@ -25,10 +25,10 @@
 /* Colori presi dai PDF delle copertine */
 :root {
   --crema: #f4ecdb;
-  --carta: #ffffff; /* bianco come la carta dei quaderni */
+  --carta: #fbf7ee; /* avorio: il bianco puro abbaglia sul fondo crema */
   --rosso: #9e3829;
   --testo: #2b2621;
-  --rigo: #b9ae98; /* solo per le righe decorative del quaderno */
+  --rigo: #c9bda4; /* solo per le righe decorative del quaderno */
   --misura: 40rem;
   --largo: 68rem;
   color-scheme: light;
@@ -210,6 +210,20 @@ main:focus {
   background: #7f2c20;
   text-decoration: underline;
 }
+.pulsante.secondario {
+  background: transparent;
+  color: var(--testo);
+  border: 2px solid var(--testo);
+}
+.pulsante.secondario:hover {
+  background: var(--carta);
+}
+.pulsanti {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
 .avviso {
   display: inline-block;
   border: 2px solid var(--testo);
@@ -237,6 +251,10 @@ main:focus {
   border: 1px solid #d8ccb2;
   box-shadow: 0 2px 6px rgb(43 38 33 / 0.12);
   padding: 6%;
+}
+/* il bianco dei disegni prende il colore della carta */
+.foglio img {
+  mix-blend-mode: multiply;
 }
 
 .segnaposto {

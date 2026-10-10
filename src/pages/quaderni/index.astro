@@ -25,10 +25,14 @@ const volumi = await volumiInOrdine();
 
 <style>
   .elenco {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
     margin-top: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr));
+  }
+  .elenco > :global(*) {
+    flex: 0 1 21rem;
   }
   .elenco :global(h2) {
     margin-top: 0;
