@@ -14,16 +14,18 @@
 - **Disegni sul sito**: un solo disegno da colorare per volume, il numero 1 (le biglie, la campana), che compare comunque nell'anteprima di Amazon. Risoluzione da schermo, non da stampa.
 - **Campana**: `TF1_01_campana_v3.png` è la versione definitiva, anche se il nome non finisce in `_def`.
 - **Email**: info@lascatoladilatta.it, ricomposto nella pagina da un piccolo script. Senza script compare scritto a parole ("info (chiocciola) lascatoladilatta.it").
-- **Pagine**: home, I quaderni, una pagina per volume, Esempi, Pagina da provare, Contatti, Note legali, Pagina non trovata.
+- **Pagine**: home, I quaderni, una pagina per volume, Pagina da provare, Contatti, Note legali, Pagina non trovata.
 - **Telemetria di Astro**: disattivata sul computer e nella costruzione su GitHub.
 - **Vercel ricontrollato e confermato escluso**: le sue regole (aggiornate al 14 settembre 2026) riservano il piano gratuito all'uso non commerciale e contano come commerciale anche "pubblicizzare la vendita di un prodotto", quindi un sito che rimanda ad Amazon richiederebbe il piano Pro a pagamento. Si resta su GitHub Pages; l'alternativa gratuita che ammette l'uso commerciale è Cloudflare Pages.
 
 - **Home rifatta** dopo la revisione di Laura: niente disegni colorati in apertura, tutto centrato, in "Come funziona" le quattro pagine delle biglie con i testi del quaderno, carta avorio `#fbf7ee` al posto del bianco puro, tolto "a casa" dagli inviti a stampare.
 - **Pagina da provare**: il soggetto è il tamburello, il gioco con la racchetta di pelle, che non compare in nessun quaderno (era fra le riserve dei giochi, "da chiarire"). Sotto il pulsante per scaricarla, la stessa pagina colorata in tre modi (matite, pennarelli, sfondo decorativo) e il collegamento agli Esempi.
 
+- **Pagina Esempi tolta**: gli esempi colorati e la pagina da provare stanno insieme in `/prova/`, intitolata "Esempi colorati e una pagina da provare" (voce del menu "Prova una pagina"). Prima le versioni colorate del tamburello, poi il pulsante per scaricarlo. Il retro di copertina resta com'è: la pagina mantiene tutte e due le promesse.
+
 ## Testi da rivedere (proposte di Claude)
 
-- Testi della home, della pagina I quaderni, di Esempi, della Pagina da provare, di Contatti, delle Note legali e della pagina non trovata.
+- Testi della home, della pagina I quaderni, della pagina Esempi colorati e una pagina da provare, di Contatti, delle Note legali e della pagina non trovata.
 - Titoli e descrizioni per i motori di ricerca di tutte le pagine.
 - Nomi dei giochi negli elenchi dei volumi, ricavati dai nomi dei file e dai testi del retro: da confrontare con i titoli degli Excel.
 - Testi alternativi delle immagini.
@@ -33,9 +35,9 @@
 - [ ] Laura: su GitHub, Settings → Emails, attivare "Keep my email addresses private" e "Block command line pushes that expose my email".
 - [ ] Laura: rivedere i testi proposti.
 - [ ] Decidere se nelle note legali va indicato chi cura il sito (il nome di Laura o solo la collana).
-- [ ] Immagini delle pagine colorate per la pagina Esempi (preparate da Laura).
 - [ ] PDF della pagina di prova del tamburello, in formato A4 (preparato da Laura).
 - [ ] Tre versioni colorate della pagina del tamburello: matite, pennarelli, sfondo decorativo.
+- [ ] Decidere se aggiungere l'indirizzo del sito nel colophon dei quaderni, come prevede il documento di progetto: nelle bozze del 10 ottobre non c'è. Si corregge nel foglio "Pagine fisse" degli Excel e si rigenerano le bozze.
 - [ ] Togliere il tamburello dalle riserve nel foglio Archivio di `Giochi_quattro_quaderni.xlsx` (lo fa Laura: l'Excel è un file di lavoro).
 - [ ] Creare il repository su GitHub e fare il primo push, quando Laura lo chiede.
 - [ ] Attivare GitHub Pages con origine "GitHub Actions".

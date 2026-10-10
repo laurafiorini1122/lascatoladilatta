@@ -3,7 +3,7 @@ import type { APIRoute } from 'astro';
 import { volumiInOrdine } from '../volumi';
 import { assoluto } from '../sito';
 
-const PAGINE_FISSE = ['/', '/quaderni/', '/esempi/', '/prova/', '/contatti/', '/note-legali/'];
+const PAGINE_FISSE = ['/', '/quaderni/', '/prova/', '/contatti/', '/note-legali/'];
 
 export const GET: APIRoute = async () => {
   const volumi = await volumiInOrdine();

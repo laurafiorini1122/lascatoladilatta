@@ -15,8 +15,7 @@ export const PAGINA_DI_PROVA: string | null = null;
 export const MENU = [
   { href: '/', testo: 'Home' },
   { href: '/quaderni/', testo: 'I quaderni' },
-  { href: '/esempi/', testo: 'Esempi' },
-  { href: '/prova/', testo: 'Pagina da provare' },
+  { href: '/prova/', testo: 'Prova una pagina' },
   { href: '/contatti/', testo: 'Contatti' },
 ];
 

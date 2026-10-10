@@ -67,7 +67,7 @@ C:\Users\Scuola\.venvs\lascatoladilatta\Scripts\python.exe scripts\prepara_carat
 ## Struttura
 
 - `src/content/volumi/*.json`: un file per volume (titolo, sottotitolo, testo del retro, 15 giochi, collegamento Amazon, immagini). Lo schema in `src/content.config.ts` blocca la costruzione se manca un campo.
-- `src/pages/`: home, `quaderni/` (elenco e una pagina per volume, creata da sola), `esempi/`, `prova/`, `contatti/`, `note-legali/`, `404`, `sitemap.xml`, `robots.txt`.
+- `src/pages/`: home, `quaderni/` (elenco e una pagina per volume, creata da sola), `prova/` (esempi colorati e pagina da provare insieme), `contatti/`, `note-legali/`, `404`, `sitemap.xml`, `robots.txt`.
 - `src/sito.ts`: nome, email, PDF della pagina di prova, voci del menu e la funzione `url()` da usare per **ogni** collegamento interno.
 - `src/fonts/`: i caratteri in WOFF2. `public/immagini/`: le immagini già pronte.
 - `scripts/`: preparazione di immagini e caratteri da `materiali`.

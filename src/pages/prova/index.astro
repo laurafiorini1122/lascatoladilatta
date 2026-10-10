@@ -1,4 +1,7 @@
 ---
+// Esempi colorati e pagina da provare: le due cose promesse dal retro di
+// copertina, riunite in una sola pagina con il tamburello, che non compare
+// in nessun quaderno.
 import Base from '../../layouts/Base.astro';
 import { PAGINA_DI_PROVA, url } from '../../sito';
 
@@ -11,33 +14,18 @@ const versioni = [
 ---
 
 <Base
-  titolo="Una pagina da provare, da stampare e colorare"
-  descrizione="Scarica la pagina del tamburello, stampala su un foglio A4 e prova a colorare il disegno e a scrivere il ricordo, come nei quaderni La scatola di latta."
+  titolo="Esempi colorati e una pagina da provare da stampare"
+  descrizione="La pagina del tamburello colorata in modi diversi, da scaricare e stampare su un foglio A4 per provare a colorare e a scrivere il ricordo."
   percorso="/prova/"
 >
   <div class="contenitore centrato">
     <section class="apertura">
-      <h1>Una pagina da provare</h1>
+      <h1>Esempi colorati e una pagina da provare</h1>
       <p class="introduzione">
-        Prima di scegliere un quaderno puoi provare com'è fatta una pagina. Scaricala, stampala su un
-        foglio A4 e prova a colorare il disegno e a scrivere il ricordo che ti fa venire in
-        mente.
+        Prima di scegliere un quaderno puoi vedere com'è fatta una pagina e provarla. È dedicata
+        al tamburello, il gioco con la racchetta di pelle. Non è in nessun quaderno, così non la
+        ritroverai uguale nel libro.
       </p>
-      <p>
-        La pagina è dedicata al tamburello, il gioco con la racchetta di pelle. Non è in nessun
-        quaderno, così non la ritroverai uguale nel libro.
-      </p>
-      {
-        PAGINA_DI_PROVA ? (
-          <p>
-            <a class="pulsante" href={url(PAGINA_DI_PROVA)} download>
-              Scarica la pagina da provare (PDF)
-            </a>
-          </p>
-        ) : (
-          <p class="avviso">La pagina da provare sarà disponibile a breve.</p>
-        )
-      }
     </section>
 
     <section aria-labelledby="colorata">
@@ -58,13 +46,26 @@ const versioni = [
           ))
         }
       </ul>
-      <p>
-        Altre pagine colorate le trovi negli <a href={url('/esempi/')}>esempi</a>.
-      </p>
     </section>
 
-    <section class="breve" aria-labelledby="stampare">
-      <h2 id="stampare">Per stampare bene</h2>
+    <section class="breve" aria-labelledby="provala">
+      <h2 id="provala">Ora prova tu</h2>
+      <p>
+        Scarica la pagina, stampala su un foglio A4 e prova a colorare il disegno e a scrivere il
+        ricordo che ti fa venire in mente.
+      </p>
+      {
+        PAGINA_DI_PROVA ? (
+          <p>
+            <a class="pulsante" href={url(PAGINA_DI_PROVA)} download>
+              Scarica la pagina da provare (PDF)
+            </a>
+          </p>
+        ) : (
+          <p class="avviso">La pagina da provare sarà disponibile a breve.</p>
+        )
+      }
+      <h3>Per stampare bene</h3>
       <p>
         Usa carta bianca normale e, se la stampante lo chiede, scegli "dimensioni effettive" o
         "100%" invece di "adatta alla pagina". Se vuoi usare i pennarelli, stampa solo su un lato
@@ -89,7 +90,7 @@ const versioni = [
   .versioni {
     list-style: none;
     padding: 0;
-    margin: 2rem 0;
+    margin: 2rem 0 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -101,5 +102,8 @@ const versioni = [
   .versioni p {
     margin: 0.75rem 0 0;
     font-weight: 700;
+  }
+  .breve h3 {
+    margin-top: 2.5rem;
   }
 </style>
