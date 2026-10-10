@@ -1,0 +1,37 @@
+---
+import Base from '../../layouts/Base.astro';
+import SchedaVolume from '../../components/SchedaVolume.astro';
+import { volumiInOrdine } from '../../volumi';
+
+const volumi = await volumiInOrdine();
+---
+
+<Base
+  titolo="I quaderni della collana La scatola di latta"
+  descrizione="I quaderni da colorare dedicati ai giochi dei bambini e delle bambine degli anni '50 e '60, con le pagine per scrivere i ricordi di allora."
+  percorso="/quaderni/"
+>
+  <div class="contenitore">
+    <h1>I quaderni</h1>
+    <p class="introduzione testo">
+      I primi due quaderni sono dedicati ai giochi: quelli dei bambini in Calzoni corti, quelli
+      delle bambine in Trecce e fiocchi. Altri volumi sono in preparazione.
+    </p>
+    <div class="elenco">
+      {volumi.map((volume) => <SchedaVolume volume={volume} livello="h2" />)}
+    </div>
+  </div>
+</Base>
+
+<style>
+  .elenco {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr));
+  }
+  .elenco :global(h2) {
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+</style>

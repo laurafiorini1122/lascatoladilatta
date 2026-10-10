@@ -1,0 +1,45 @@
+{
+  "titolo": "Calzoni corti 1",
+  "ordine": 1,
+  "sottotitolo": "Biglie, trottole e pallone: i giochi dei bambini degli anni '50 e '60 da colorare e da raccontare",
+  "seo": {
+    "titolo": "Calzoni corti 1: giochi dei bambini anni '50 e '60",
+    "descrizione": "Biglie, trottola, fionda e carretto a cuscinetti: quindici giochi dei bambini degli anni '50 e '60 da colorare, con le righe per scrivere i ricordi."
+  },
+  "retro": [
+    "Quindici giochi dei bambini degli anni '50 e '60, da colorare e da raccontare.",
+    "Le biglie, la trottola, il pallone, il carretto a cuscinetti, la fionda, il trenino di latta, l'aquilone, le figurine e gli altri giochi del cortile e della strada.",
+    "Per ogni gioco una frase che riporta a quel tempo e le righe per scrivere, un disegno da colorare, una pagina con una filastrocca, un nome, una fotografia o un piccolo gioco.",
+    "Disegni grandi e semplici, righe comode, retro dei disegni bianco, adatto anche ai pennarelli.",
+    "Si colora da soli o in compagnia. Alla fine il quaderno diventa un libro di ricordi da tenere."
+  ],
+  "giochi": [
+    "Le biglie",
+    "L'aquilone",
+    "La trottola",
+    "Le figurine",
+    "Il pallone",
+    "La barchetta di carta",
+    "Il carretto a cuscinetti",
+    "L'orsacchiotto",
+    "La fionda",
+    "I pattini a rotelle",
+    "Il trenino di latta",
+    "L'altalena",
+    "La spada",
+    "La bicicletta",
+    "La tombola"
+  ],
+  "amazon": "",
+  "immagini": {
+    "copertina": {
+      "sorgente": "copertine/CC1_03_trottola_colorata_copertina.png",
+      "alt": "Una trottola di legno colorata in giallo, verde e rosso, con la cordicella avvolta a spirale accanto. La punta è rimasta bianca, da colorare."
+    },
+    "disegno": {
+      "sorgente": "disegni/CC1_01_biglie_v2_def.png",
+      "alt": "Disegno al tratto da colorare: quattro biglie di vetro, una grande in alto e tre più piccole sotto, attraversate da strisce ondulate.",
+      "didascalia": "Le biglie, il primo disegno del quaderno."
+    }
+  }
+}

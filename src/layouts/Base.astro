@@ -1,0 +1,99 @@
+---
+// Modello comune a tutte le pagine. Ogni pagina passa titolo, descrizione e
+// percorso; le pagine dei volumi passano anche l'immagine per i social.
+import '../styles/globale.css';
+import fontRegular from '../fonts/ahn-regular.woff2?url';
+import fontBold from '../fonts/ahn-bold.woff2?url';
+import { MENU, NOME, assoluto, url } from '../sito';
+
+interface Props {
+  titolo: string;
+  descrizione: string;
+  percorso: string;
+  immagine?: string;
+  immagineAlt?: string;
+  nascosta?: boolean; // true per le pagine da tenere fuori dai motori di ricerca
+}
+
+const {
+  titolo,
+  descrizione,
+  percorso,
+  nascosta = false,
+  immagine = '/immagini/condivisione/sito.jpg',
+  immagineAlt = "Una trottola e una corda per saltare colorate, con la scritta La scatola di latta. Anni '50 e '60. Da colorare e da raccontare.",
+} = Astro.props;
+
+const canonico = assoluto(percorso);
+// "page" sulla voce della pagina aperta, "true" sulla sezione che la contiene
+// (per esempio I quaderni quando si guarda un volume)
+const corrente = (href: string) => {
+  if (percorso === href) return 'page';
+  if (href !== '/' && percorso.startsWith(href)) return 'true';
+  return undefined;
+};
+---
+
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{titolo}</title>
+    <meta name="description" content={descrizione} />
+    {nascosta ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonico} />}
+    <link rel="icon" href={url('/favicon.svg')} type="image/svg+xml" />
+    <link rel="preload" href={fontRegular} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={fontBold} as="font" type="font/woff2" crossorigin />
+    <meta name="theme-color" content="#f4ecdb" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:site_name" content={NOME} />
+    <meta property="og:title" content={titolo} />
+    <meta property="og:description" content={descrizione} />
+    <meta property="og:url" content={canonico} />
+    <meta property="og:image" content={assoluto(immagine)} />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={immagineAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <a class="salta" href="#contenuto">Vai al contenuto</a>
+
+    <header class="testata">
+      <div class="contenitore">
+        <a class="marchio" href={url('/')} aria-label={`${NOME}, torna alla home`}>{NOME}</a>
+        <nav class="menu" aria-label="Menu principale">
+          <ul>
+            {
+              MENU.map((voce) => (
+                <li>
+                  <a href={url(voce.href)} aria-current={corrente(voce.href)}>
+                    {voce.testo}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenuto" tabindex="-1">
+      <slot />
+    </main>
+
+    <footer class="piede">
+      <div class="contenitore">
+        <ul>
+          <li><a href={url('/contatti/')}>Contatti</a></li>
+          <li><a href={url('/note-legali/')}>Note legali</a></li>
+        </ul>
+        <p>© 2026 {NOME}. Questo sito non usa cookie e non raccoglie dati.</p>
+      </div>
+    </footer>
+  </body>
+</html>

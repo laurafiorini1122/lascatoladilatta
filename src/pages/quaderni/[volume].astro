@@ -1,0 +1,155 @@
+---
+// Pagina di un volume: viene creata da sola per ogni file in src/content/volumi/.
+import type { GetStaticPaths } from 'astro';
+import Base from '../../layouts/Base.astro';
+import { volumiInOrdine } from '../../volumi';
+import { SOTTOTITOLO, url } from '../../sito';
+
+export const getStaticPaths = (async () => {
+  const volumi = await volumiInOrdine();
+  return volumi.map((volume) => ({ params: { volume: volume.id }, props: { volume } }));
+}) satisfies GetStaticPaths;
+
+const { volume } = Astro.props;
+const { id, data } = volume;
+const cartella = url(`/immagini/volumi/${id}`);
+const [primoParagrafo, ...altriParagrafi] = data.retro;
+---
+
+<Base
+  titolo={data.seo.titolo}
+  descrizione={data.seo.descrizione}
+  percorso={`/quaderni/${id}/`}
+  immagine={`/immagini/condivisione/${id}.jpg`}
+  immagineAlt={`${data.immagini.copertina.alt} Accanto il titolo ${data.titolo}.`}
+>
+  <div class="contenitore">
+    <p class="indietro"><a href={url('/quaderni/')}>Tutti i quaderni</a></p>
+
+    <section class="presentazione">
+      <img
+        class="copertina"
+        src={`${cartella}/copertina-480.webp`}
+        srcset={`${cartella}/copertina-480.webp 480w, ${cartella}/copertina-960.webp 960w`}
+        sizes="(min-width: 48rem) 22rem, 70vw"
+        alt={data.immagini.copertina.alt}
+        decoding="async"
+        fetchpriority="high"
+      />
+      <div>
+        <p class="etichetta">La scatola di latta</p>
+        <h1>{data.titolo}</h1>
+        <p class="sottotitolo">{SOTTOTITOLO}</p>
+        <p class="introduzione">{data.sottotitolo}</p>
+        {
+          data.amazon ? (
+            <a class="pulsante" href={data.amazon}>
+              Lo trovi su Amazon
+            </a>
+          ) : (
+            <p class="avviso">Presto su Amazon</p>
+          )
+        }
+      </div>
+    </section>
+
+    <section class="testo" aria-labelledby="il-quaderno">
+      <h2 id="il-quaderno">Il quaderno</h2>
+      <p><strong>{primoParagrafo}</strong></p>
+      {altriParagrafi.map((p) => <p>{p}</p>)}
+    </section>
+
+    <section aria-labelledby="i-giochi">
+      <h2 id="i-giochi">I quindici giochi</h2>
+      <ol class="giochi">
+        {data.giochi.map((gioco) => <li>{gioco}</li>)}
+      </ol>
+    </section>
+
+    <section aria-labelledby="un-disegno">
+      <h2 id="un-disegno">Un disegno del quaderno</h2>
+      <figure class="disegno">
+        <div class="foglio">
+          <img
+            src={`${cartella}/disegno-600.webp`}
+            srcset={`${cartella}/disegno-600.webp 600w, ${cartella}/disegno-1200.webp 1200w`}
+            sizes="(min-width: 32rem) 26rem, 85vw"
+            alt={data.immagini.disegno.alt}
+            width="600"
+            height="776"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <figcaption>{data.immagini.disegno.didascalia}</figcaption>
+      </figure>
+    </section>
+
+    <section class="testo" aria-labelledby="prova">
+      <h2 id="prova">Prova prima di scegliere</h2>
+      <p>
+        Guarda <a href={url('/esempi/')}>alcune pagine già colorate</a> oppure scarica
+        <a href={url('/prova/')}>una pagina da provare</a> e stampala a casa.
+      </p>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .indietro {
+    margin-bottom: 1.5rem;
+  }
+  .indietro a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 3rem;
+  }
+  .indietro a::before {
+    content: '←';
+    margin-right: 0.5rem;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .presentazione {
+    display: grid;
+    gap: 2.5rem;
+    align-items: center;
+    grid-template-columns: minmax(12rem, 22rem) 1fr;
+  }
+  .copertina {
+    max-height: 30rem;
+    width: auto;
+    margin-inline: auto;
+  }
+  .sottotitolo {
+    font-style: italic;
+    font-size: 1.2rem;
+  }
+  .giochi {
+    columns: 2 16rem;
+    column-gap: 3rem;
+    padding-left: 1.75rem;
+    max-width: 48rem;
+    font-size: 1.1rem;
+  }
+  .giochi li {
+    break-inside: avoid;
+    padding: 0.2rem 0;
+  }
+  .disegno {
+    margin: 0;
+    max-width: 26rem;
+  }
+  .disegno figcaption {
+    font-style: italic;
+    margin-top: 0.75rem;
+  }
+  @media (max-width: 48rem) {
+    .presentazione {
+      grid-template-columns: 1fr;
+    }
+    .copertina {
+      max-height: 20rem;
+    }
+  }
+</style>

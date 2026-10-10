@@ -1,0 +1,81 @@
+---
+// Tessera di un volume, usata nella home e nella pagina I quaderni.
+import type { CollectionEntry } from 'astro:content';
+import { url } from '../sito';
+
+interface Props {
+  volume: CollectionEntry<'volumi'>;
+  livello?: 'h2' | 'h3';
+}
+const { volume, livello = 'h3' } = Astro.props;
+const { id, data } = volume;
+const Titolo = livello;
+const cartella = url(`/immagini/volumi/${id}`);
+---
+
+<article class="scheda">
+  <img
+    src={`${cartella}/copertina-480.webp`}
+    srcset={`${cartella}/copertina-480.webp 480w, ${cartella}/copertina-960.webp 960w`}
+    sizes="(min-width: 50rem) 16rem, 60vw"
+    alt={data.immagini.copertina.alt}
+    loading="lazy"
+    decoding="async"
+  />
+  <div>
+    <Titolo><a href={url(`/quaderni/${id}/`)}>{data.titolo}</a></Titolo>
+    <p>{data.sottotitolo}</p>
+    <p class="stato">{data.amazon ? 'Disponibile su Amazon' : 'Presto su Amazon'}</p>
+  </div>
+</article>
+
+<style>
+  .scheda {
+    display: grid;
+    gap: 1.5rem;
+    align-items: center;
+    grid-template-columns: minmax(8rem, 14rem) 1fr;
+    background: var(--carta);
+    border: 2px solid var(--testo);
+    border-radius: 8px;
+    padding: 1.5rem;
+    position: relative;
+  }
+  .scheda img {
+    max-height: 18rem;
+    width: auto;
+    margin-inline: auto;
+  }
+  /* tutta la tessera è cliccabile, ma il collegamento resta uno solo */
+  .scheda a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+  .scheda a {
+    color: var(--testo);
+  }
+  .scheda:hover {
+    border-color: var(--rosso);
+  }
+  .scheda:has(a:focus-visible) {
+    outline: 4px solid var(--testo);
+    outline-offset: 4px;
+  }
+  .scheda a:focus-visible {
+    outline: none;
+  }
+  .stato {
+    font-weight: 700;
+    color: var(--rosso);
+    margin: 0;
+  }
+  @media (max-width: 34rem) {
+    .scheda {
+      grid-template-columns: 1fr;
+    }
+    .scheda img {
+      max-height: 14rem;
+    }
+  }
+</style>

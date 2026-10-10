@@ -1,0 +1,42 @@
+---
+import Base from '../../layouts/Base.astro';
+import { PAGINA_DI_PROVA, url } from '../../sito';
+---
+
+<Base
+  titolo="Una pagina da provare, da stampare e colorare"
+  descrizione="Scarica una pagina dei quaderni La scatola di latta, stampala su un foglio A4 e prova a colorare il disegno e a scrivere il tuo ricordo."
+  percorso="/prova/"
+>
+  <div class="contenitore testo">
+    <h1>Una pagina da provare</h1>
+    <p class="introduzione">
+      Prima di scegliere un quaderno puoi provarne una pagina. Scaricala, stampala su un foglio
+      A4 e prova a colorare il disegno e a scrivere il ricordo che ti fa venire in mente.
+    </p>
+    {
+      PAGINA_DI_PROVA ? (
+        <p>
+          <a class="pulsante" href={url(PAGINA_DI_PROVA)} download>
+            Scarica la pagina da provare (PDF)
+          </a>
+        </p>
+      ) : (
+        <p class="segnaposto riquadro">La pagina da provare sarà disponibile a breve.</p>
+      )
+    }
+    <h2>Per stampare bene</h2>
+    <p>
+      Usa carta bianca normale e, se la stampante lo chiede, scegli "dimensioni effettive" o
+      "100%" invece di "adatta alla pagina". Se vuoi usare i pennarelli, stampa solo su un lato
+      del foglio.
+    </p>
+  </div>
+</Base>
+
+<style>
+  .riquadro {
+    aspect-ratio: auto;
+    padding: 2rem;
+  }
+</style>

@@ -1,0 +1,19 @@
+---
+import Base from '../layouts/Base.astro';
+import { url } from '../sito';
+---
+
+<Base
+  titolo="Pagina non trovata | La scatola di latta"
+  descrizione="La pagina che cercavi non c'è. Torna alla home di La scatola di latta."
+  percorso="/404/"
+  nascosta
+>
+  <div class="contenitore testo">
+    <h1>Pagina non trovata</h1>
+    <p class="introduzione">
+      La pagina che cercavi non c'è o ha cambiato indirizzo.
+    </p>
+    <p><a class="pulsante" href={url('/')}>Torna alla home</a></p>
+  </div>
+</Base>

@@ -1,0 +1,23 @@
+# Materiali di lavoro: non vanno mai pubblicati
+materiali/
+Prompt_avvio_Claude_Code.md
+
+# Dipendenze e file generati
+node_modules/
+dist/
+.astro/
+
+# File di sistema e di editor
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
+.vscode/
+.idea/
+
+# Variabili d'ambiente
+.env
+.env.*
+
+# Impostazioni locali di Claude Code
+.claude/settings.local.json

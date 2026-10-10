@@ -1,0 +1,46 @@
+---
+import Base from '../../layouts/Base.astro';
+
+// Segnaposto finché non arrivano le immagini delle pagine colorate.
+const segnaposto = [
+  'Pagina colorata di Calzoni corti',
+  'Pagina colorata di Trecce e fiocchi',
+  'Pagina colorata con sfondo decorativo',
+  'Pagina colorata con sfondo decorativo',
+];
+---
+
+<Base
+  titolo="Esempi di pagine colorate | La scatola di latta"
+  descrizione="Alcune pagine dei quaderni La scatola di latta già colorate, anche con uno sfondo decorativo intorno al disegno, per farsi un'idea prima di cominciare."
+  percorso="/esempi/"
+>
+  <div class="contenitore">
+    <h1>Esempi di pagine colorate</h1>
+    <p class="introduzione testo">
+      Qualche pagina dei quaderni già colorata, a volte con uno sfondo decorativo intorno al
+      disegno. Ognuno colora a modo suo: qui trovi solo qualche idea.
+    </p>
+    <ul class="griglia elenco">
+      {
+        segnaposto.map((testo) => (
+          <li class="segnaposto">
+            <span>
+              {testo}
+              <br />
+              (immagine in arrivo)
+            </span>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Base>
+
+<style>
+  .elenco {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+  }
+</style>

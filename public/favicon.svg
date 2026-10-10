@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- una scatola di latta tonda vista di fianco, nei colori del sito -->
+  <rect x="8" y="22" width="48" height="34" rx="4" fill="#9e3829"/>
+  <rect x="5" y="12" width="54" height="12" rx="4" fill="#2b2621"/>
+  <rect x="8" y="34" width="48" height="6" fill="#f4ecdb"/>
+</svg>

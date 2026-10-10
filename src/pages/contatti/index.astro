@@ -1,0 +1,44 @@
+---
+import Base from '../../layouts/Base.astro';
+import { EMAIL } from '../../sito';
+---
+
+<Base
+  titolo="Contatti | La scatola di latta"
+  descrizione="L'indirizzo email della collana La scatola di latta, per domande sui quaderni da colorare e da raccontare o per segnalazioni."
+  percorso="/contatti/"
+>
+  <div class="contenitore testo">
+    <h1>Contatti</h1>
+    <p class="introduzione">
+      Per domande sui quaderni, segnalazioni o per raccontare come li usi, puoi scrivere a:
+    </p>
+    <p class="indirizzo">
+      <span id="email" data-utente={EMAIL.utente} data-dominio={EMAIL.dominio}>
+        {EMAIL.utente} (chiocciola) {EMAIL.dominio}
+      </span>
+    </p>
+    <p>Non c'è un modulo da compilare: si scrive direttamente dal proprio programma di posta.</p>
+  </div>
+</Base>
+
+<script>
+  // Ricompone l'indirizzo e lo rende cliccabile. Senza script resta la forma
+  // scritta a parole, che si può ricopiare a mano.
+  const segnaposto = document.getElementById('email');
+  if (segnaposto) {
+    const indirizzo = `${segnaposto.dataset.utente}@${segnaposto.dataset.dominio}`;
+    const link = document.createElement('a');
+    link.href = `mailto:${indirizzo}`;
+    link.textContent = indirizzo;
+    segnaposto.replaceWith(link);
+  }
+</script>
+
+<style>
+  .indirizzo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+  }
+</style>

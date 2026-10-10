@@ -1,0 +1,165 @@
+---
+import Base from '../layouts/Base.astro';
+import SchedaVolume from '../components/SchedaVolume.astro';
+import { volumiInOrdine } from '../volumi';
+import { url } from '../sito';
+
+const volumi = await volumiInOrdine();
+const primo = volumi[0];
+const cartella = url(`/immagini/volumi/${primo.id}`);
+---
+
+<Base
+  titolo="La scatola di latta: quaderni da colorare anni '50 e '60"
+  descrizione="Quaderni da colorare e da raccontare con gli oggetti dell'Italia degli anni '50 e '60: a destra il disegno, a sinistra le righe per scrivere il ricordo."
+  percorso="/"
+>
+  <div class="contenitore">
+    <section class="apertura">
+      <div class="testo">
+        <h1>Quaderni da colorare e da raccontare</h1>
+        <p class="introduzione">
+          Ogni quaderno della collana raccoglie quindici oggetti della vita di tutti i giorni
+          nell'Italia degli anni '50 e '60. Per ognuno c'è un disegno da colorare e una pagina
+          per scrivere il ricordo che fa tornare in mente.
+        </p>
+      </div>
+      <div class="coppia" aria-hidden="true">
+        {
+          volumi.slice(0, 2).map((v) => (
+            <img
+              src={url(`/immagini/volumi/${v.id}/copertina-480.webp`)}
+              alt=""
+              width="480"
+              height="600"
+              decoding="async"
+            />
+          ))
+        }
+      </div>
+    </section>
+
+    <section aria-labelledby="come-funziona">
+      <h2 id="come-funziona">Come funziona un quaderno</h2>
+      <figure class="doppia">
+        <div class="pagine" aria-hidden="true">
+          <div class="foglio sinistra">
+            <p class="titoletto">Le biglie</p>
+            <div class="righe"></div>
+          </div>
+          <div class="foglio destra">
+            <img src={`${cartella}/disegno-600.webp`} alt="" width="600" height="776" loading="lazy" decoding="async" />
+          </div>
+        </div>
+        <figcaption>
+          Una doppia pagina del quaderno: a sinistra il titolo dell'oggetto e le righe per
+          scrivere, a destra il disegno delle biglie da colorare.
+        </figcaption>
+      </figure>
+      <div class="testo">
+        <p>
+          A destra si colora, a sinistra si racconta. Sulla pagina di sinistra una frase riporta
+          a quel tempo e lascia le righe per scrivere. Dopo ogni disegno c'è una pagina con una
+          filastrocca, un nome, una fotografia o un piccolo gioco.
+        </p>
+        <p>
+          Si può cominciare da qualsiasi pagina e scrivere da soli oppure raccontare a qualcuno
+          che scrive. Il retro dei disegni è bianco, così si possono usare anche i pennarelli.
+        </p>
+        <p>
+          Pagina dopo pagina il quaderno diventa un libro di ricordi da tenere, da colorare
+          anche insieme ai nipoti.
+        </p>
+      </div>
+    </section>
+
+    <section aria-labelledby="i-quaderni">
+      <h2 id="i-quaderni">I quaderni</h2>
+      <div class="volumi">
+        {volumi.map((volume) => <SchedaVolume volume={volume} />)}
+      </div>
+    </section>
+
+    <section aria-labelledby="prima-di-scegliere">
+      <h2 id="prima-di-scegliere">Prima di scegliere</h2>
+      <div class="testo">
+        <p>
+          Puoi guardare <a href={url('/esempi/')}>alcune pagine già colorate</a> oppure
+          scaricare <a href={url('/prova/')}>una pagina da provare</a>, stamparla e colorarla
+          a casa.
+        </p>
+      </div>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .apertura {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+    grid-template-columns: 1.3fr 1fr;
+  }
+  .coppia {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .coppia img {
+    width: 45%;
+    max-height: 20rem;
+    object-fit: contain;
+  }
+  .doppia {
+    margin: 0 0 2rem;
+    max-width: 36rem;
+  }
+  .pagine {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .pagine .foglio {
+    aspect-ratio: 8.5 / 11;
+    padding: 9% 9% 6%;
+  }
+  .sinistra {
+    border-right: none;
+  }
+  .titoletto {
+    font-weight: 700;
+    font-size: clamp(0.8rem, 2.6vw, 1.3rem);
+    margin: 0 0 8%;
+  }
+  .righe {
+    height: 70%;
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent calc(10% - 2px),
+      var(--rigo) calc(10% - 2px),
+      var(--rigo) 10%
+    );
+  }
+  .destra {
+    display: grid;
+    place-items: center;
+  }
+  .doppia figcaption {
+    font-style: italic;
+    margin-top: 0.75rem;
+  }
+  .volumi {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr));
+  }
+  @media (max-width: 48rem) {
+    .apertura {
+      grid-template-columns: 1fr;
+    }
+    .coppia img {
+      max-height: 13rem;
+    }
+  }
+</style>

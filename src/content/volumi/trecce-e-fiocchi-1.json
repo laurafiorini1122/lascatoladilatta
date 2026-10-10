@@ -1,0 +1,45 @@
+{
+  "titolo": "Trecce e fiocchi 1",
+  "ordine": 2,
+  "sottotitolo": "Campana, corda e bambole: i giochi delle bambine degli anni '50 e '60 da colorare e da raccontare",
+  "seo": {
+    "titolo": "Trecce e fiocchi 1: giochi delle bambine anni '50 e '60",
+    "descrizione": "Campana, corda, pentoline e bambola di pezza: quindici giochi delle bambine degli anni '50 e '60 da colorare, con lo spazio per raccontare com'erano."
+  },
+  "retro": [
+    "Quindici giochi delle bambine degli anni '50 e '60, da colorare e da raccontare.",
+    "La campana, la corda, la bambola di pezza, la palla contro il muro, le pentoline, la bambola di carta, il primo ricamo, l'aquilone, le figurine e gli altri giochi del cortile e di casa.",
+    "Per ogni gioco una frase che riporta a quel tempo e le righe per scrivere, un disegno da colorare, una pagina con una filastrocca, un nome, una fotografia o un piccolo gioco.",
+    "Disegni grandi e semplici, righe comode, retro dei disegni bianco, adatto anche ai pennarelli.",
+    "Si colora da soli o in compagnia. Alla fine il quaderno diventa un libro di ricordi da tenere."
+  ],
+  "giochi": [
+    "La campana",
+    "L'aquilone",
+    "La corda",
+    "Le figurine",
+    "La bambola di pezza",
+    "La barchetta di carta",
+    "La palla contro il muro",
+    "L'orsacchiotto",
+    "Le pentoline",
+    "I pattini a rotelle",
+    "La bambola di carta",
+    "L'altalena",
+    "Il primo ricamo",
+    "La bicicletta",
+    "La tombola"
+  ],
+  "amazon": "",
+  "immagini": {
+    "copertina": {
+      "sorgente": "copertine/TF1_03_corda_colorata_copertina.png",
+      "alt": "Una corda per saltare colorata a strisce gialle e verdi, con le due impugnature di legno dalla punta rossa. Un tratto della corda è rimasto bianco, da colorare."
+    },
+    "disegno": {
+      "sorgente": "disegni/TF1_01_campana_v3.png",
+      "alt": "Disegno al tratto da colorare: lo schema del gioco della campana, con le caselle numerate da 1 a 8, il semicerchio in cima e un sasso piatto accanto.",
+      "didascalia": "La campana, il primo disegno del quaderno."
+    }
+  }
+}

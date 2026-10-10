@@ -1,0 +1,47 @@
+---
+import Base from '../../layouts/Base.astro';
+import { url } from '../../sito';
+---
+
+<Base
+  titolo="Note legali | La scatola di latta"
+  descrizione="Il sito La scatola di latta non usa cookie, non raccoglie dati personali e non usa strumenti di statistica o di tracciamento."
+  percorso="/note-legali/"
+>
+  <div class="contenitore testo">
+    <h1>Note legali</h1>
+
+    <h2>Cookie e dati personali</h2>
+    <p>
+      Questo sito non usa cookie, non raccoglie dati personali e non usa strumenti di statistica
+      o di tracciamento. Non ci sono moduli da compilare. Tutto quello che vedi, caratteri
+      compresi, sta sul sito stesso: aprendo le pagine non si contatta nessun altro servizio.
+    </p>
+
+    <h2>Dove è ospitato il sito</h2>
+    <p>
+      Il sito è ospitato da GitHub Pages, un servizio di GitHub, Inc. Come ogni servizio di
+      questo tipo, GitHub registra per ragioni di sicurezza i dati tecnici delle visite, per
+      esempio l'indirizzo IP, secondo la sua
+      <a href="https://docs.github.com/it/site-policy/privacy-policies/github-general-privacy-statement">informativa sulla privacy</a>.
+    </p>
+
+    <h2>Collegamenti ad Amazon</h2>
+    <p>
+      I quaderni si acquistano su Amazon. Quando segui un collegamento verso Amazon esci da
+      questo sito e valgono le regole di Amazon.
+    </p>
+
+    <h2>Disegni e testi</h2>
+    <p>
+      I disegni e i testi dei quaderni e di questo sito appartengono a La scatola di latta. La
+      pagina da provare si può stampare liberamente per uso personale.
+    </p>
+
+    <h2>Carattere</h2>
+    <p>
+      Il sito usa una versione modificata del carattere Atkinson Hyperlegible Next, distribuita
+      con la <a href={url('/fonts/OFL.txt')}>licenza SIL Open Font License 1.1</a>.
+    </p>
+  </div>
+</Base>
