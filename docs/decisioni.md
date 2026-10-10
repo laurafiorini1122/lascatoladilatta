@@ -34,6 +34,7 @@
 
 - [ ] Laura: su GitHub, Settings → Emails, attivare "Keep my email addresses private" e "Block command line pushes that expose my email".
 - [ ] Laura: rivedere i testi proposti.
+- [ ] Quando i quaderni saranno di più: rimpicciolire i disegni colorati nelle tessere dei volumi (in home e nella pagina I quaderni), che con tanti volumi diventano troppo grandi.
 - [ ] Decidere se nelle note legali va indicato chi cura il sito (il nome di Laura o solo la collana).
 - [ ] PDF della pagina di prova del tamburello, in formato A4 (preparato da Laura).
 - [ ] Tre versioni colorate della pagina del tamburello: matite, pennarelli, sfondo decorativo.

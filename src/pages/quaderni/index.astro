@@ -11,11 +11,12 @@ const volumi = await volumiInOrdine();
   descrizione="I quaderni da colorare dedicati ai giochi dei bambini e delle bambine degli anni '50 e '60, con le pagine per scrivere i ricordi di allora."
   percorso="/quaderni/"
 >
-  <div class="contenitore">
+  <div class="contenitore centrato">
     <h1>I quaderni</h1>
-    <p class="introduzione testo">
-      I primi due quaderni sono dedicati ai giochi: quelli dei bambini in Calzoni corti, quelli
-      delle bambine in Trecce e fiocchi. Altri volumi sono in preparazione.
+    <p class="introduzione">
+      I primi due quaderni sono dedicati ai giochi: quelli dei bambini in <strong>Calzoni corti</strong>,
+      quelli delle bambine in <strong>Trecce e fiocchi</strong>.<br />
+      Altri volumi sono in preparazione.
     </p>
     <div class="elenco">
       {volumi.map((volume) => <SchedaVolume volume={volume} livello="h2" />)}
@@ -24,6 +25,13 @@ const volumi = await volumiInOrdine();
 </Base>
 
 <style>
+  .centrato {
+    text-align: center;
+  }
+  .introduzione {
+    max-width: 40rem;
+    margin-inline: auto;
+  }
   .elenco {
     display: flex;
     flex-wrap: wrap;
