@@ -82,4 +82,4 @@ C:\Users\Scuola\.venvs\lascatoladilatta\Scripts\python.exe scripts\prepara_carat
 
 ## Indirizzo e dominio
 
-Fino al collegamento del dominio il sito vive su `https://laurafiorini1122.github.io/lascatoladilatta/`. Per passare a lascatoladilatta.it si cambiano `site` e `base` in `astro.config.mjs` e si aggiunge `public/CNAME`. Le istruzioni per Register.it (DNS, verifica del dominio su GitHub, HTTPS, casella info@lascatoladilatta.it) vanno date a Laura passo per passo al momento giusto.
+Il sito è pubblicato su `https://lascatoladilatta.it` (dominio comprato su Register.it il 12 ottobre 2026), dal repository pubblico `laurafiorini1122/lascatoladilatta` con GitHub Pages e GitHub Actions. `site` in `astro.config.mjs` e `public/CNAME` portano il dominio. Nei DNS di Register.it: quattro record A verso GitHub Pages per il dominio principale, un CNAME `www` verso `laurafiorini1122.github.io` e il record TXT di verifica del dominio di GitHub. I record MX servono alla casella info@lascatoladilatta.it e non vanno toccati.
