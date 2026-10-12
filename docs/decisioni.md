@@ -27,6 +27,7 @@
 
 - **Pagina di prova completa**: in `/prova/` le tre versioni colorate del tamburello (matite, pennarelli, sfondo decorativo) al posto dei segnaposto, intere e senza ritagli, e il pulsante "Scarica la pagina da provare (PDF, 2 pagine A4)". Il PDF ha due pagine A4 (testo con le righe e disegno), quindi si stampa su due fogli: corretti la frase della pagina e la descrizione per i motori di ricerca. Le immagini si preparano con `scripts/prepara_immagini.py` in WebP, il PDF è `public/tamburello-pagina-da-provare.pdf`.
 - **Home**: il riquadro "Prima di scegliere" non ha un posto per un'immagine, quindi resta com'è.
+- **Pubblicazione**: dominio lascatoladilatta.it comprato da Laura su Register.it (scadenza 12 ottobre 2027). Creato il repository pubblico `laurafiorini1122/lascatoladilatta`, attivato GitHub Pages con origine GitHub Actions, verificato il dominio nelle impostazioni dell'account GitHub. Nella zona DNS di Register.it: il record A di parcheggio (195.110.124.133) sostituito con i quattro indirizzi di GitHub Pages (185.199.108-111.153), il CNAME `www` puntato a `laurafiorini1122.github.io.`, aggiunto il TXT `_github-pages-challenge-laurafiorini1122`. I record della posta (MX, SPF, DKIM, autodiscover, autoconfig, authsmtp, pop, PEC) e il CNAME `ftp` sono rimasti com'erano. Nel pannello nuovo di Register.it il nome "@" non indica il dominio principale: crea "@.lascatoladilatta.it", va corretto in "lascatoladilatta.it" nella riga dopo il salvataggio.
 
 ## Testi da rivedere (proposte di Claude)
 
@@ -45,8 +46,9 @@
 - [x] Tre versioni colorate della pagina del tamburello: matite, pennarelli, sfondo decorativo.
 - [ ] Decidere se aggiungere l'indirizzo del sito nel colophon dei quaderni, come prevede il documento di progetto: nelle bozze del 10 ottobre non c'è. Si corregge nel foglio "Pagine fisse" degli Excel e si rigenerano le bozze.
 - [ ] Togliere il tamburello dalle riserve nel foglio Archivio di `Giochi_quattro_quaderni.xlsx` (lo fa Laura: l'Excel è un file di lavoro).
-- [ ] Creare il repository su GitHub e fare il primo push, quando Laura lo chiede.
-- [ ] Attivare GitHub Pages con origine "GitHub Actions".
+- [x] Creare il repository su GitHub e fare il primo push.
+- [x] Attivare GitHub Pages con origine "GitHub Actions".
 - [ ] Collegamenti Amazon dei due volumi, quando sono pubblicati.
-- [ ] Comprare lascatoladilatta.it su Register.it e collegarlo: DNS, `public/CNAME`, `site` e `base` in `astro.config.mjs`, verifica del dominio su GitHub, HTTPS.
+- [x] Comprare lascatoladilatta.it su Register.it e impostare i DNS, `public/CNAME`, `site` in `astro.config.mjs` e la verifica del dominio su GitHub.
+- [ ] Inserire lascatoladilatta.it come dominio personalizzato nelle impostazioni Pages del repository e attivare "Enforce HTTPS" quando GitHub ha emesso il certificato.
 - [ ] Attivare la casella info@lascatoladilatta.it su Register.it.
