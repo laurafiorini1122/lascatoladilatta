@@ -52,4 +52,6 @@
 - [x] Comprare lascatoladilatta.it su Register.it e impostare i DNS, `public/CNAME`, `site` in `astro.config.mjs` e la verifica del dominio su GitHub.
 - [ ] Inserire lascatoladilatta.it come dominio personalizzato nelle impostazioni Pages del repository e attivare "Enforce HTTPS" quando GitHub ha emesso il certificato.
 - [x] Attivare la casella info@lascatoladilatta.it su Register.it (12 ottobre 2026: casella creata nel pacchetto del dominio, 2 GB; la password l'ha scelta e inserita Laura). Server: IMAP pop.securemail.pro porta 993 SSL, SMTP authsmtp.securemail.pro porta 465 SSL, nome utente l'indirizzo completo; webmail su webmail.register.it.
-- [ ] Decidere come leggere la posta della collana (webmail, inoltro o account separato su telefono e computer) e mandare un messaggio di prova.
+- [x] Posta della collana: inoltro attivo verso la casella personale di Laura (webmail Register.it → Impostazioni → Inoltro, "Invia copia a"), con l'originale che resta anche in info@. L'indirizzo personale non va scritto in questo repository pubblico.
+- [ ] Laura: mandare un messaggio di prova a info@lascatoladilatta.it e controllare che arrivi anche nella casella personale.
+- [ ] Facoltativo: in Gmail, "Invia messaggio come" info@lascatoladilatta.it (server authsmtp.securemail.pro, porta 465 SSL), per rispondere senza mostrare l'indirizzo personale.
