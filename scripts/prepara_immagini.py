@@ -6,7 +6,9 @@ campo "sorgente" e scrive in public/immagini:
 - volumi/<volume>/copertina-480.webp e -960.webp, il disegno colorato;
 - volumi/<volume>/disegno-600.webp e -1200.webp, il disegno da colorare;
 - condivisione/<volume>.jpg, l'anteprima per Facebook e gli altri social;
-- condivisione/sito.jpg, l'anteprima delle pagine generali.
+- condivisione/sito.jpg, l'anteprima delle pagine generali;
+- prova/tamburello-<versione>-600.webp e -1200.webp, le tre versioni colorate
+  della pagina di prova, e copia il PDF della pagina in public/.
 
 Le immagini restano a risoluzione da schermo: non bastano per stampare.
 
@@ -117,6 +119,26 @@ def anteprima_sito(colorati: list[Image.Image], destinazione: Path) -> None:
     print(f"  {destinazione.relative_to(RADICE)}: {destinazione.stat().st_size / 1024:.0f} KB")
 
 
+# Le versioni colorate della pagina di prova: nome nel sito -> file in materiali.
+TAMBURELLO = {
+    "matite": "PROVA_tamburello_colorato_matita_web.jpg",
+    "pennarelli": "PROVA_tamburello_colorato_pennarello_decorato_web.jpg",
+    "sfondo": "PROVA_tamburello_colorato_sfondo_righe_web.jpg",
+}
+
+
+def pagina_di_prova() -> None:
+    print("Pagina di prova")
+    cartella = MATERIALI / "pagina-di-prova"
+    for nome, sorgente in TAMBURELLO.items():
+        img = Image.open(cartella / sorgente).convert("RGB")
+        for w in (600, 1200):
+            salva_webp(larghezza(img, w), USCITA / "prova" / f"tamburello-{nome}-{w}.webp", 82)
+    pdf = RADICE / "public" / "tamburello-pagina-da-provare.pdf"
+    pdf.write_bytes((cartella / "PROVA_tamburello.pdf").read_bytes())
+    print(f"  {pdf.relative_to(RADICE)}: {pdf.stat().st_size / 1024:.0f} KB")
+
+
 def main() -> None:
     volumi = sorted(
         (json.loads(p.read_text(encoding="utf-8")) | {"slug": p.stem} for p in VOLUMI.glob("*.json")),
@@ -140,6 +162,7 @@ def main() -> None:
         anteprima_volume(v["titolo"], colorato, USCITA / "condivisione" / f"{v['slug']}.jpg")
 
     anteprima_sito(colorati, USCITA / "condivisione" / "sito.jpg")
+    pagina_di_prova()
 
 
 if __name__ == "__main__":

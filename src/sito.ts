@@ -9,7 +9,7 @@ export const EMAIL = { utente: 'info', dominio: 'lascatoladilatta.it' };
 
 // Percorso del PDF della pagina di prova dentro public/, oppure null finché
 // il file non è pronto.
-export const PAGINA_DI_PROVA: string | null = null;
+export const PAGINA_DI_PROVA: string | null = '/tamburello-pagina-da-provare.pdf';
 
 // Voci del menu principale.
 export const MENU = [

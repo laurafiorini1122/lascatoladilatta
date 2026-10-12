@@ -23,6 +23,11 @@
 
 - **Pagina Esempi tolta**: gli esempi colorati e la pagina da provare stanno insieme in `/prova/`, intitolata "Esempi colorati e una pagina da provare" (voce del menu "Prova una pagina"). Prima le versioni colorate del tamburello, poi il pulsante per scaricarlo. Il retro di copertina resta com'è: la pagina mantiene tutte e due le promesse.
 
+### 12 ottobre 2026
+
+- **Pagina di prova completa**: in `/prova/` le tre versioni colorate del tamburello (matite, pennarelli, sfondo decorativo) al posto dei segnaposto, intere e senza ritagli, e il pulsante "Scarica la pagina da provare (PDF, 2 pagine A4)". Il PDF ha due pagine A4 (testo con le righe e disegno), quindi si stampa su due fogli: corretti la frase della pagina e la descrizione per i motori di ricerca. Le immagini si preparano con `scripts/prepara_immagini.py` in WebP, il PDF è `public/tamburello-pagina-da-provare.pdf`.
+- **Home**: il riquadro "Prima di scegliere" non ha un posto per un'immagine, quindi resta com'è.
+
 ## Testi da rivedere (proposte di Claude)
 
 - Testi della home, della pagina I quaderni, della pagina Esempi colorati e una pagina da provare, di Contatti, delle Note legali e della pagina non trovata.
@@ -36,8 +41,8 @@
 - [ ] Laura: rivedere i testi proposti.
 - [ ] Quando i quaderni saranno di più: rimpicciolire i disegni colorati nelle tessere dei volumi (in home e nella pagina I quaderni), che con tanti volumi diventano troppo grandi.
 - [ ] Decidere se nelle note legali va indicato chi cura il sito (il nome di Laura o solo la collana).
-- [ ] PDF della pagina di prova del tamburello, in formato A4 (preparato da Laura).
-- [ ] Tre versioni colorate della pagina del tamburello: matite, pennarelli, sfondo decorativo.
+- [x] PDF della pagina di prova del tamburello, in formato A4 (preparato da Laura).
+- [x] Tre versioni colorate della pagina del tamburello: matite, pennarelli, sfondo decorativo.
 - [ ] Decidere se aggiungere l'indirizzo del sito nel colophon dei quaderni, come prevede il documento di progetto: nelle bozze del 10 ottobre non c'è. Si corregge nel foglio "Pagine fisse" degli Excel e si rigenerano le bozze.
 - [ ] Togliere il tamburello dalle riserve nel foglio Archivio di `Giochi_quattro_quaderni.xlsx` (lo fa Laura: l'Excel è un file di lavoro).
 - [ ] Creare il repository su GitHub e fare il primo push, quando Laura lo chiede.

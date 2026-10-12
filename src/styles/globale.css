@@ -257,18 +257,6 @@ main:focus {
   mix-blend-mode: multiply;
 }
 
-.segnaposto {
-  display: grid;
-  place-items: center;
-  text-align: center;
-  aspect-ratio: 8.5 / 11;
-  border: 3px dashed var(--testo);
-  border-radius: 6px;
-  padding: 1rem;
-  background: var(--carta);
-  font-weight: 700;
-}
-
 .griglia {
   display: grid;
   gap: 2rem;

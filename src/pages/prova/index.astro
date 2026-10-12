@@ -5,17 +5,30 @@
 import Base from '../../layouts/Base.astro';
 import { PAGINA_DI_PROVA, url } from '../../sito';
 
-// Segnaposto finché non arrivano le versioni colorate della pagina di prova.
+// Le tre versioni colorate, preparate da scripts/prepara_immagini.py.
 const versioni = [
-  { titolo: 'Con le matite colorate' },
-  { titolo: 'Con i pennarelli' },
-  { titolo: 'Con uno sfondo decorativo' },
+  {
+    titolo: 'Con le matite colorate',
+    file: 'matite',
+    alt: 'Il tamburello colorato con le matite',
+  },
+  {
+    titolo: 'Con i pennarelli',
+    file: 'pennarelli',
+    alt: 'Il tamburello colorato con i pennarelli e decorato a cerchietti',
+  },
+  {
+    titolo: 'Con uno sfondo decorativo',
+    file: 'sfondo',
+    alt: 'Il tamburello colorato con le matite, con uno sfondo di righe ondulate',
+  },
 ];
+const immagine = (file: string, w: number) => url(`/immagini/prova/tamburello-${file}-${w}.webp`);
 ---
 
 <Base
   titolo="Esempi colorati e una pagina da provare da stampare"
-  descrizione="La pagina del tamburello colorata in modi diversi, da scaricare e stampare su un foglio A4 per provare a colorare e a scrivere il ricordo."
+  descrizione="La pagina del tamburello colorata in modi diversi, da scaricare e stampare su due fogli A4 per provare a colorare e a scrivere il ricordo."
   percorso="/prova/"
 >
   <div class="contenitore centrato">
@@ -34,14 +47,17 @@ const versioni = [
         {
           versioni.map((v) => (
             <li>
-              <div class="segnaposto">
-                <span>
-                  Il tamburello
-                  <br />
-                  (immagine in arrivo)
-                </span>
-              </div>
               <p>{v.titolo}</p>
+              <img
+                src={immagine(v.file, 600)}
+                srcset={`${immagine(v.file, 600)} 600w, ${immagine(v.file, 1200)} 1200w`}
+                sizes="(min-width: 64rem) 20rem, (min-width: 40rem) 45vw, 100vw"
+                alt={v.alt}
+                width="600"
+                height="777"
+                loading="lazy"
+                decoding="async"
+              />
             </li>
           ))
         }
@@ -51,14 +67,14 @@ const versioni = [
     <section class="breve" aria-labelledby="provala">
       <h2 id="provala">Ora prova tu</h2>
       <p>
-        Scarica la pagina, stampala su un foglio A4 e prova a colorare il disegno e a scrivere il
+        Scarica la pagina, stampala su due fogli A4 e prova a colorare il disegno e a scrivere il
         ricordo che ti fa venire in mente.
       </p>
       {
         PAGINA_DI_PROVA ? (
           <p>
             <a class="pulsante" href={url(PAGINA_DI_PROVA)} download>
-              Scarica la pagina da provare (PDF)
+              Scarica la pagina da provare (PDF, 2 pagine A4)
             </a>
           </p>
         ) : (
@@ -97,11 +113,20 @@ const versioni = [
     gap: 2rem;
   }
   .versioni li {
-    flex: 0 1 16rem;
+    flex: 1 1 15rem;
+    max-width: 22rem;
   }
   .versioni p {
-    margin: 0.75rem 0 0;
+    margin: 0 0 0.75rem;
     font-weight: 700;
+  }
+  /* il disegno intero, senza ritagli, su un foglio con un'ombra leggera */
+  .versioni img {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #fff;
+    box-shadow: 0 2px 8px rgb(43 38 33 / 0.14);
   }
   .breve h3 {
     margin-top: 2.5rem;
