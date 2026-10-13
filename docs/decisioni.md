@@ -29,6 +29,10 @@
 - **Home**: il riquadro "Prima di scegliere" non ha un posto per un'immagine, quindi resta com'è.
 - **Pubblicazione**: dominio lascatoladilatta.it comprato da Laura su Register.it (scadenza 12 ottobre 2027). Creato il repository pubblico `laurafiorini1122/lascatoladilatta`, attivato GitHub Pages con origine GitHub Actions, verificato il dominio nelle impostazioni dell'account GitHub. Nella zona DNS di Register.it: il record A di parcheggio (195.110.124.133) sostituito con i quattro indirizzi di GitHub Pages (185.199.108-111.153), il CNAME `www` puntato a `laurafiorini1122.github.io.`, aggiunto il TXT `_github-pages-challenge-laurafiorini1122`. I record della posta (MX, SPF, DKIM, autodiscover, autoconfig, authsmtp, pop, PEC) e il CNAME `ftp` sono rimasti com'erano. Nel pannello nuovo di Register.it il nome "@" non indica il dominio principale: crea "@.lascatoladilatta.it", va corretto in "lascatoladilatta.it" nella riga dopo il salvataggio.
 
+### 13 ottobre 2026
+
+- **Revisione dei testi con Laura** (fatta nella chat del Progetto, correzioni già scritte nei file): in home descrizione per i motori di ricerca senza "dell'Italia degli anni" ("con gli oggetti di tutti i giorni degli anni '50 e '60 in Italia"), a capo dopo "Ogni oggetto occupa quattro pagine.", frase finale di "Come funziona" riscritta ("Non c'è un ordine da seguire..." e "libro di ricordi da conservare"), "Scaricala, stampala e prova a completarla." in home e nelle pagine dei volumi (senza "Poi"). In `/prova/` l'introduzione dice che le pagine sono due, "simili a quelle del libro"; titolo "Ora tocca a te"; pulsante "Scarica le pagine da provare (PDF, 2 fogli A4)". "Nell'Italia degli anni '50 e '60" nell'apertura della home resta. Nel retro dei volumi "un libro di ricordi da conservare" (cambiato anche nelle copertine, rigenerate). Il disegno di esempio nelle pagine dei volumi resta. Niente terza pagina nella pagina da provare.
+
 ## Testi da rivedere (proposte di Claude)
 
 - Testi della home, della pagina I quaderni, della pagina Esempi colorati e una pagina da provare, di Contatti, delle Note legali e della pagina non trovata.

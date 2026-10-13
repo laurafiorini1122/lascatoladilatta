@@ -35,9 +35,10 @@ const immagine = (file: string, w: number) => url(`/immagini/prova/tamburello-${
     <section class="apertura">
       <h1>Esempi colorati e una pagina da provare</h1>
       <p class="introduzione">
-        Prima di scegliere un quaderno puoi vedere com'è fatta una pagina e provarla.<br />
-        È dedicata al tamburello, il gioco con la racchetta di pelle.<br />
-        Non è in nessun quaderno, così non la ritroverai uguale nel libro.
+        Prima di scegliere un quaderno puoi provare due pagine simili a quelle del libro: una per
+        scrivere il ricordo e una con il disegno da colorare.<br />
+        Sono dedicate al tamburello, il gioco con la racchetta di pelle.<br />
+        Il tamburello non è in nessun quaderno, così queste pagine non le ritroverai nel libro.
       </p>
     </section>
 
@@ -65,16 +66,16 @@ const immagine = (file: string, w: number) => url(`/immagini/prova/tamburello-${
     </section>
 
     <section class="breve" aria-labelledby="provala">
-      <h2 id="provala">Ora prova tu</h2>
+      <h2 id="provala">Ora tocca a te</h2>
       <p>
-        Scarica la pagina, stampala su due fogli A4 e prova a colorare il disegno e a scrivere il
-        ricordo che ti fa venire in mente.
+        Scarica le due pagine, stampale su due fogli A4, colora il disegno e scrivi il ricordo che
+        ti fa venire in mente.
       </p>
       {
         PAGINA_DI_PROVA ? (
           <p>
             <a class="pulsante" href={url(PAGINA_DI_PROVA)} download>
-              Scarica la pagina da provare (PDF, 2 pagine A4)
+              Scarica le pagine da provare (PDF, 2 fogli A4)
             </a>
           </p>
         ) : (
