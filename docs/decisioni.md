@@ -33,6 +33,13 @@
 
 - **Revisione dei testi con Laura** (fatta nella chat del Progetto, correzioni già scritte nei file): in home descrizione per i motori di ricerca senza "dell'Italia degli anni" ("con gli oggetti di tutti i giorni degli anni '50 e '60 in Italia"), a capo dopo "Ogni oggetto occupa quattro pagine.", frase finale di "Come funziona" riscritta ("Non c'è un ordine da seguire..." e "libro di ricordi da conservare"), "Scaricala, stampala e prova a completarla." in home e nelle pagine dei volumi (senza "Poi"). In `/prova/` l'introduzione dice che le pagine sono due, "simili a quelle del libro"; titolo "Ora tocca a te"; pulsante "Scarica le pagine da provare (PDF, 2 fogli A4)". "Nell'Italia degli anni '50 e '60" nell'apertura della home resta. Nel retro dei volumi "un libro di ricordi da conservare" (cambiato anche nelle copertine, rigenerate). Il disegno di esempio nelle pagine dei volumi resta. Niente terza pagina nella pagina da provare.
 
+### 14 ottobre 2026
+
+- **Sottotitolo** cambiato in "Anni '50 e '60. Da colorare e raccontare" (tolto il secondo "da"), anche nei sottotitoli lunghi, nella prima riga del retro e nelle descrizioni per i motori di ricerca. Copertine nuove in materiali/copertine.
+- **Anteprime per i social** rigenerate con `scripts/prepara_immagini.py`. Proposta di Claude: quando il sottotitolo non sta su una riga va a capo dopo il punto ("Anni '50 e '60." / "Da colorare e raccontare"), come succede nell'anteprima di *Calzoni corti 1*.
+- **Pubblicazione**: le correzioni del 13 ottobre (commit `8005f66`) e quelle del 14 ottobre (commit `238136b`) sono online. Controllati sul sito online la home, le due pagine dei volumi e la pagina di prova.
+- **Certificato HTTPS**: emesso da Let's Encrypt il 12 ottobre 2026 per lascatoladilatta.it e www.lascatoladilatta.it, scade il 10 gennaio 2027 e GitHub lo rinnova da solo. Il sito risponde già in https, ma l'indirizzo con http non viene ancora girato su https.
+
 ## Testi da rivedere (proposte di Claude)
 
 - Testi della home, della pagina I quaderni, della pagina Esempi colorati e una pagina da provare, di Contatti, delle Note legali e della pagina non trovata.
@@ -59,4 +66,5 @@
 - [x] Posta della collana: inoltro attivo verso la casella personale di Laura (webmail Register.it → Impostazioni → Inoltro, "Invia copia a"), con l'originale che resta anche in info@. L'indirizzo personale non va scritto in questo repository pubblico.
 - [ ] Laura: mandare un messaggio di prova a info@lascatoladilatta.it e controllare che arrivi anche nella casella personale.
 - [ ] Facoltativo: in Gmail, "Invia messaggio come" info@lascatoladilatta.it (server authsmtp.securemail.pro, porta 465 SSL), per rispondere senza mostrare l'indirizzo personale.
-- [ ] Sottotitolo cambiato il 14 ottobre 2026 in "Anni '50 e '60. Da colorare e raccontare" (tolto il secondo "da"), anche nei sottotitoli lunghi e nella prima riga del retro. Testi già corretti da Claude in src/sito.ts, src/layouts/Base.astro, src/pages/index.astro, src/pages/contatti/index.astro, src/content/volumi/*.json e scripts/prepara_immagini.py. Claude Code: rigenerare con scripts/prepara_immagini.py le anteprime per i social (condivisione/*.jpg), che contengono ancora il sottotitolo vecchio, controllare e pubblicare. Copertine nuove in materiali/copertine.
+- [x] Correzioni dei testi del 13 ottobre 2026 (home, Prova una pagina, pagine e retro dei volumi): pubblicate il 14 ottobre 2026.
+- [x] Sottotitolo cambiato il 14 ottobre 2026 in "Anni '50 e '60. Da colorare e raccontare" (tolto il secondo "da"), anche nei sottotitoli lunghi e nella prima riga del retro. Testi già corretti da Claude in src/sito.ts, src/layouts/Base.astro, src/pages/index.astro, src/pages/contatti/index.astro, src/content/volumi/*.json e scripts/prepara_immagini.py. Claude Code: rigenerare con scripts/prepara_immagini.py le anteprime per i social (condivisione/*.jpg), che contengono ancora il sottotitolo vecchio, controllare e pubblicare. Copertine nuove in materiali/copertine. Fatto e pubblicato il 14 ottobre 2026.
