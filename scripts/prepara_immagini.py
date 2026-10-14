@@ -28,7 +28,7 @@ FONTS = MATERIALI / "fonts"
 CREMA = (0xF4, 0xEC, 0xDB)
 ROSSO = (0x9E, 0x38, 0x29)
 TESTO = (0x2B, 0x26, 0x21)
-SOTTOTITOLO_COPERTINA = "Anni '50 e '60. Da colorare e da raccontare"
+SOTTOTITOLO_COPERTINA = "Anni '50 e '60. Da colorare e raccontare"
 
 
 def larghezza(img: Image.Image, w: int) -> Image.Image:
@@ -88,7 +88,14 @@ def anteprima_volume(titolo: str, colorato: Image.Image, destinazione: Path) -> 
         d.text((70, y), riga, font=f_titolo, fill=TESTO)
         y += 92
     f_sotto = font("AHN-Italic.ttf", 34)
-    for riga in a_capo(d, SOTTOTITOLO_COPERTINA, f_sotto, 1200 - 70 - figura.width - 140):
+    spazio = 1200 - 70 - figura.width - 140
+    if d.textlength(SOTTOTITOLO_COPERTINA, font=f_sotto) <= spazio:
+        righe_sotto = [SOTTOTITOLO_COPERTINA]
+    else:
+        # Se non sta su una riga si va a capo dopo il punto, non a metà frase.
+        prima, seconda = SOTTOTITOLO_COPERTINA.split(". ", 1)
+        righe_sotto = [f"{prima}.", *a_capo(d, seconda, f_sotto, spazio)]
+    for riga in righe_sotto:
         d.text((70, y + 16), riga, font=f_sotto, fill=TESTO)
         y += 46
     destinazione.parent.mkdir(parents=True, exist_ok=True)

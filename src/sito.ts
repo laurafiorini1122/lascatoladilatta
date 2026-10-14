@@ -1,7 +1,7 @@
 // Impostazioni comuni a tutto il sito.
 
 export const NOME = 'La scatola di latta';
-export const SOTTOTITOLO = "Anni '50 e '60. Da colorare e da raccontare";
+export const SOTTOTITOLO = "Anni '50 e '60. Da colorare e raccontare";
 
 // L'indirizzo email è diviso in due parti e viene ricomposto nella pagina da un
 // piccolo script, così i programmi che raccolgono indirizzi non lo trovano.
