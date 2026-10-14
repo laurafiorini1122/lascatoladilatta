@@ -39,6 +39,7 @@
 - **Anteprime per i social** rigenerate con `scripts/prepara_immagini.py`. Proposta di Claude: quando il sottotitolo non sta su una riga va a capo dopo il punto ("Anni '50 e '60." / "Da colorare e raccontare"), come succede nell'anteprima di *Calzoni corti 1*.
 - **Pubblicazione**: le correzioni del 13 ottobre (commit `8005f66`) e quelle del 14 ottobre (commit `238136b`) sono online. Controllati sul sito online la home, le due pagine dei volumi e la pagina di prova.
 - **Certificato HTTPS**: emesso da Let's Encrypt il 12 ottobre 2026 per lascatoladilatta.it e www.lascatoladilatta.it, scade il 10 gennaio 2027 e GitHub lo rinnova da solo. Il sito risponde già in https, ma l'indirizzo con http non viene ancora girato su https.
+- **Enforce HTTPS** attivato da Laura nelle impostazioni Pages (il dominio personalizzato lascatoladilatta.it c'era già, con il controllo DNS riuscito). Ora http://lascatoladilatta.it, http://www.lascatoladilatta.it e https://www.lascatoladilatta.it portano tutti a https://lascatoladilatta.it.
 - **Pagine dei volumi**: la parte da "Il quaderno" in giù era appoggiata al bordo sinistro, con un grande vuoto a destra. Ora è una colonna al centro della pagina, con il testo allineato a sinistra (scartato il testo tutto centrato, che nei paragrafi lunghi e nell'elenco dei giochi si legge peggio). Sul telefono non cambia niente.
 
 ## Testi da rivedere (proposte di Claude)
@@ -62,7 +63,7 @@
 - [x] Attivare GitHub Pages con origine "GitHub Actions".
 - [ ] Collegamenti Amazon dei due volumi, quando sono pubblicati.
 - [x] Comprare lascatoladilatta.it su Register.it e impostare i DNS, `public/CNAME`, `site` in `astro.config.mjs` e la verifica del dominio su GitHub.
-- [ ] Inserire lascatoladilatta.it come dominio personalizzato nelle impostazioni Pages del repository e attivare "Enforce HTTPS" quando GitHub ha emesso il certificato.
+- [x] Inserire lascatoladilatta.it come dominio personalizzato nelle impostazioni Pages del repository e attivare "Enforce HTTPS" quando GitHub ha emesso il certificato. Fatto il 14 ottobre 2026.
 - [x] Attivare la casella info@lascatoladilatta.it su Register.it (12 ottobre 2026: casella creata nel pacchetto del dominio, 2 GB; la password l'ha scelta e inserita Laura). Server: IMAP pop.securemail.pro porta 993 SSL, SMTP authsmtp.securemail.pro porta 465 SSL, nome utente l'indirizzo completo; webmail su webmail.register.it.
 - [x] Posta della collana: inoltro attivo verso la casella personale di Laura (webmail Register.it → Impostazioni → Inoltro, "Invia copia a"), con l'originale che resta anche in info@. L'indirizzo personale non va scritto in questo repository pubblico.
 - [ ] Laura: mandare un messaggio di prova a info@lascatoladilatta.it e controllare che arrivi anche nella casella personale.
