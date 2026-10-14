@@ -53,45 +53,47 @@ const [primoParagrafo, ...altriParagrafi] = data.retro;
       </div>
     </section>
 
-    <section class="testo" aria-labelledby="il-quaderno">
-      <h2 id="il-quaderno">Il quaderno</h2>
-      <p><strong>{primoParagrafo}</strong></p>
-      {altriParagrafi.map((p) => <p>{p}</p>)}
-    </section>
+    <div class="corpo">
+      <section class="testo" aria-labelledby="il-quaderno">
+        <h2 id="il-quaderno">Il quaderno</h2>
+        <p><strong>{primoParagrafo}</strong></p>
+        {altriParagrafi.map((p) => <p>{p}</p>)}
+      </section>
 
-    <section aria-labelledby="i-giochi">
-      <h2 id="i-giochi">I quindici giochi</h2>
-      <ol class="giochi">
-        {data.giochi.map((gioco) => <li>{gioco}</li>)}
-      </ol>
-    </section>
+      <section aria-labelledby="i-giochi">
+        <h2 id="i-giochi">I quindici giochi</h2>
+        <ol class="giochi">
+          {data.giochi.map((gioco) => <li>{gioco}</li>)}
+        </ol>
+      </section>
 
-    <section aria-labelledby="un-disegno">
-      <h2 id="un-disegno">Un disegno del quaderno</h2>
-      <figure class="disegno">
-        <div class="foglio">
-          <img
-            src={`${cartella}/disegno-600.webp`}
-            srcset={`${cartella}/disegno-600.webp 600w, ${cartella}/disegno-1200.webp 1200w`}
-            sizes="(min-width: 32rem) 26rem, 85vw"
-            alt={data.immagini.disegno.alt}
-            width="600"
-            height="776"
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
-        <figcaption>{data.immagini.disegno.didascalia}</figcaption>
-      </figure>
-    </section>
+      <section aria-labelledby="un-disegno">
+        <h2 id="un-disegno">Un disegno del quaderno</h2>
+        <figure class="disegno">
+          <div class="foglio">
+            <img
+              src={`${cartella}/disegno-600.webp`}
+              srcset={`${cartella}/disegno-600.webp 600w, ${cartella}/disegno-1200.webp 1200w`}
+              sizes="(min-width: 32rem) 26rem, 85vw"
+              alt={data.immagini.disegno.alt}
+              width="600"
+              height="776"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <figcaption>{data.immagini.disegno.didascalia}</figcaption>
+        </figure>
+      </section>
 
-    <section class="testo" aria-labelledby="prova">
-      <h2 id="prova">Prova prima di scegliere</h2>
-      <p>
-        Guarda <a href={url('/prova/')}>la pagina del tamburello colorata in modi diversi</a>.<br />
-        Scaricala, stampala e prova a completarla.
-      </p>
-    </section>
+      <section class="testo" aria-labelledby="prova">
+        <h2 id="prova">Prova prima di scegliere</h2>
+        <p>
+          Guarda <a href={url('/prova/')}>la pagina del tamburello colorata in modi diversi</a>.<br />
+          Scaricala, stampala e prova a completarla.
+        </p>
+      </section>
+    </div>
   </div>
 </Base>
 
@@ -124,6 +126,11 @@ const [primoParagrafo, ...altriParagrafi] = data.retro;
   .sottotitolo {
     font-style: italic;
     font-size: 1.2rem;
+  }
+  /* la parte sotto la presentazione: una colonna al centro della pagina, con il testo allineato a sinistra */
+  .corpo {
+    max-width: var(--misura);
+    margin-inline: auto;
   }
   .giochi {
     columns: 2 16rem;

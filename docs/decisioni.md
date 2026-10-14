@@ -39,6 +39,7 @@
 - **Anteprime per i social** rigenerate con `scripts/prepara_immagini.py`. Proposta di Claude: quando il sottotitolo non sta su una riga va a capo dopo il punto ("Anni '50 e '60." / "Da colorare e raccontare"), come succede nell'anteprima di *Calzoni corti 1*.
 - **Pubblicazione**: le correzioni del 13 ottobre (commit `8005f66`) e quelle del 14 ottobre (commit `238136b`) sono online. Controllati sul sito online la home, le due pagine dei volumi e la pagina di prova.
 - **Certificato HTTPS**: emesso da Let's Encrypt il 12 ottobre 2026 per lascatoladilatta.it e www.lascatoladilatta.it, scade il 10 gennaio 2027 e GitHub lo rinnova da solo. Il sito risponde già in https, ma l'indirizzo con http non viene ancora girato su https.
+- **Pagine dei volumi**: la parte da "Il quaderno" in giù era appoggiata al bordo sinistro, con un grande vuoto a destra. Ora è una colonna al centro della pagina, con il testo allineato a sinistra (scartato il testo tutto centrato, che nei paragrafi lunghi e nell'elenco dei giochi si legge peggio). Sul telefono non cambia niente.
 
 ## Testi da rivedere (proposte di Claude)
 
