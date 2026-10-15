@@ -41,4 +41,11 @@ import { EMAIL } from '../../sito';
     font-weight: 700;
     overflow-wrap: anywhere;
   }
+
+  /* il collegamento nasce dallo script, quindi lo stile deve uscire dal componente */
+  .indirizzo :global(a) {
+    display: inline-block;
+    min-height: 48px;
+    padding-block: 0.25rem;
+  }
 </style>

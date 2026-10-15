@@ -52,7 +52,7 @@ const corrente = (href: string) => {
     <meta property="og:site_name" content={NOME} />
     <meta property="og:title" content={titolo} />
     <meta property="og:description" content={descrizione} />
-    <meta property="og:url" content={canonico} />
+    {!nascosta && <meta property="og:url" content={canonico} />}
     <meta property="og:image" content={assoluto(immagine)} />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
