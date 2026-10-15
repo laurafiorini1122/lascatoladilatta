@@ -47,7 +47,8 @@
 - **Controllo finale prima della pubblicazione dei quaderni**: tutte le pagine, le immagini, la sitemap, il robots.txt e il PDF della pagina di prova rispondono in https; http, www e l'indirizzo github.io portano a https://lascatoladilatta.it. Il sottotitolo "Anni '50 e '60. Da colorare e raccontare" è giusto in tutte le pagine e nelle tre anteprime per i social. Sul telefono (360 px) nessuna pagina scorre di lato e il testo resta ad almeno 20 px. Sitemap e robots.txt sono corretti e ogni pagina indica il proprio indirizzo ufficiale: il sito è pronto per Google Search Console.
 - **Correzioni dopo il controllo**: nelle Note legali il collegamento all'informativa sulla privacy di GitHub porta alla versione inglese (quella italiana non esiste più), con "(in inglese)"; i nomi dei giochi nelle pagine dei volumi sono quelli stampati nel libro (Excel e bozze), per esempio "La barchetta e l'aeroplanino di carta" e "I pattini a rotelle di ferro"; l'indirizzo email nei Contatti è un collegamento alto almeno 48 px; la pagina non trovata non dichiara più un indirizzo per i social.
 - **Pubblicazione**: le correzioni del 15 ottobre (commit `c278dcf`) sono online. Controllato che tutte le pagine, la sitemap e il robots.txt online siano uguali alla versione corretta e che il nuovo collegamento all'informativa di GitHub funzioni.
-- **Da verificare sul libro**: nel testo del fronte di copertina e nel frontespizio delle bozze il titolo è "Calzoni corti" e "Trecce e fiocchi", senza il numero; il sito scrive "Calzoni corti 1" e "Trecce e fiocchi 1". Il titolo va tenuto uguale su copertina, scheda Amazon e sito.
+- **Titolo dei volumi senza numero** (deciso da Laura): "Calzoni corti" e "Trecce e fiocchi", come su copertina, frontespizio e scheda KDP. Sul sito cambiati il titolo delle pagine dei volumi, delle tessere, dei titoli per i motori di ricerca e delle anteprime per i social (rigenerate con `scripts/prepara_immagini.py`). Gli indirizzi delle pagine restano `/quaderni/calzoni-corti-1/` e `/quaderni/trecce-e-fiocchi-1/`, come nel documento di progetto (paragrafo 5); il numero 1 resta anche nei nomi dei file. I secondi volumi avranno il titolo con il 2.
+- **File definitivi dei libri** in `materiali`: Excel aggiornati, interni definitivi `Interno_Calzoni_corti_1.pdf` e `Interno_Trecce_e_fiocchi_1.pdf`, `Scheda_KDP_volumi_1.md` e documento di progetto aggiornato. Le `Bozza_*.pdf` sono superate. Ricontrollati: frontespizio e colophon degli Excel e degli interni hanno il sottotitolo nuovo e il colophon chiude con lascatoladilatta.it; i quindici giochi del sito sono identici a quelli degli Excel e degli interni; il tamburello nel foglio Archivio di `Giochi_quattro_quaderni.xlsx` è segnato come usato per la pagina di prova del sito, "non va nei quaderni".
 
 ## Testi da rivedere (proposte di Claude)
 
@@ -63,10 +64,10 @@
 - [ ] Decidere se nelle note legali va indicato chi cura il sito (il nome di Laura o solo la collana).
 - [x] PDF della pagina di prova del tamburello, in formato A4 (preparato da Laura).
 - [x] Tre versioni colorate della pagina del tamburello: matite, pennarelli, sfondo decorativo.
-- [ ] Decidere se aggiungere l'indirizzo del sito nel colophon dei quaderni, come prevede il documento di progetto: nelle bozze del 10 ottobre non c'è. Si corregge nel foglio "Pagine fisse" degli Excel e si rigenerano le bozze. Laura dice che il colophon lo contiene dal 14 ottobre, ma il 15 ottobre negli Excel e nelle bozze di `materiali` non c'è ancora: da segnare come fatta quando arriva il file aggiornato.
-- [ ] Nel frontespizio e nel colophon degli Excel e delle bozze di `materiali` c'è ancora il sottotitolo vecchio "Da colorare e da raccontare": controllare che il file dell'interno da caricare su KDP abbia quello nuovo.
-- [ ] Laura: controllare se sul fronte delle copertine compare il numero del volume e decidere il titolo da usare su Amazon.
-- [ ] Togliere il tamburello dalle riserve nel foglio Archivio di `Giochi_quattro_quaderni.xlsx` (lo fa Laura: l'Excel è un file di lavoro).
+- [x] Indirizzo del sito nel colophon dei quaderni: c'è, nel foglio "Pagine fisse" degli Excel e negli interni definitivi. Controllato il 15 ottobre 2026.
+- [x] Sottotitolo nuovo "Da colorare e raccontare" nel frontespizio e nel colophon degli Excel e degli interni definitivi. Controllato il 15 ottobre 2026.
+- [x] Titolo dei volumi: senza numero su copertina, Amazon e sito (deciso da Laura il 15 ottobre 2026).
+- [x] Tamburello nel foglio Archivio di `Giochi_quattro_quaderni.xlsx`: segnato come usato per la pagina di prova del sito ed escluso dai quaderni. Controllato il 15 ottobre 2026.
 - [x] Creare il repository su GitHub e fare il primo push.
 - [x] Attivare GitHub Pages con origine "GitHub Actions".
 - [ ] Collegamenti Amazon dei due volumi, quando sono pubblicati.

@@ -4,7 +4,7 @@ Guida per Claude quando lavora a questo repository: il sito lascatoladilatta.it.
 
 ## Il progetto
 
-La scatola di latta è una collana di quaderni da colorare e dei ricordi, autopubblicata su Amazon KDP. Ogni quaderno raccoglie 15 oggetti della vita quotidiana in Italia negli anni '50 e '60: a destra il disegno da colorare, a sinistra la pagina per scrivere il ricordo; il retro dei disegni è bianco. I primi volumi sono *Calzoni corti 1* e *Trecce e fiocchi 1*; seguiranno *Calzoni corti 2*, *Trecce e fiocchi 2* e una quindicina di temi.
+La scatola di latta è una collana di quaderni da colorare e dei ricordi, autopubblicata su Amazon KDP. Ogni quaderno raccoglie 15 oggetti della vita quotidiana in Italia negli anni '50 e '60: a destra il disegno da colorare, a sinistra la pagina per scrivere il ricordo; il retro dei disegni è bianco. I primi volumi sono *Calzoni corti* e *Trecce e fiocchi* (il titolo non ha il numero, che resta solo nei nomi dei file e negli indirizzi delle pagine); seguiranno *Calzoni corti 2*, *Trecce e fiocchi 2* e una quindicina di temi.
 
 I lettori hanno fra i 65 e gli 80 anni. Chi compra è spesso un figlio o un nipote che cerca un regalo, oppure un animatore di un centro diurno o di una residenza.
 
