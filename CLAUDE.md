@@ -50,7 +50,7 @@ Il documento di progetto è `materiali/La_scatola_di_latta_progetto.md` (paragra
 ## Comandi
 
 ```bash
-npm run dev      # anteprima su http://localhost:4321/lascatoladilatta/
+npm run dev      # anteprima su http://localhost:4321/
 npm run build    # costruisce il sito in dist/
 npm run check    # controllo dei tipi
 ```
