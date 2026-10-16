@@ -53,6 +53,7 @@
 ### 16 ottobre 2026
 
 - **Quaderni in preparazione** (deciso da Laura): nella pagina I quaderni, sotto le schede dei due volumi, un paragrafo con il testo di Laura "In preparazione altri quaderni: la scuola, la casa, la cucina, le feste e altri giochi." Solo l'elenco dei temi, senza promesse di date, senza pulsanti e senza collegamenti.
+- **Pubblicazione** (chiesta da Laura): il paragrafo (commit `09f73f2`) è online su https://lascatoladilatta.it/quaderni/. Controllato che le altre pagine e la sitemap rispondano normalmente.
 
 ## Testi da rivedere (proposte di Claude)
 
