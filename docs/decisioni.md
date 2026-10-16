@@ -50,6 +50,10 @@
 - **Titolo dei volumi senza numero** (deciso da Laura): "Calzoni corti" e "Trecce e fiocchi", come su copertina, frontespizio e scheda KDP. Sul sito cambiati il titolo delle pagine dei volumi, delle tessere, dei titoli per i motori di ricerca e delle anteprime per i social (rigenerate con `scripts/prepara_immagini.py`). Gli indirizzi delle pagine restano `/quaderni/calzoni-corti-1/` e `/quaderni/trecce-e-fiocchi-1/`, come nel documento di progetto (paragrafo 5); il numero 1 resta anche nei nomi dei file. I secondi volumi avranno il titolo con il 2.
 - **File definitivi dei libri** in `materiali`: Excel aggiornati, interni definitivi `Interno_Calzoni_corti_1.pdf` e `Interno_Trecce_e_fiocchi_1.pdf`, `Scheda_KDP_volumi_1.md` e documento di progetto aggiornato. Le `Bozza_*.pdf` sono superate. Ricontrollati: frontespizio e colophon degli Excel e degli interni hanno il sottotitolo nuovo e il colophon chiude con lascatoladilatta.it; i quindici giochi del sito sono identici a quelli degli Excel e degli interni; il tamburello nel foglio Archivio di `Giochi_quattro_quaderni.xlsx` è segnato come usato per la pagina di prova del sito, "non va nei quaderni".
 
+### 16 ottobre 2026
+
+- **Quaderni in preparazione** (deciso da Laura): nella pagina I quaderni, sotto le schede dei due volumi, un paragrafo con il testo di Laura "In preparazione altri quaderni: la scuola, la casa, la cucina, le feste e altri giochi." Solo l'elenco dei temi, senza promesse di date, senza pulsanti e senza collegamenti.
+
 ## Testi da rivedere (proposte di Claude)
 
 - Testi della home, della pagina I quaderni, della pagina Esempi colorati e una pagina da provare, di Contatti, delle Note legali e della pagina non trovata.

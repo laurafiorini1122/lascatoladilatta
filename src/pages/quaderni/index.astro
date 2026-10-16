@@ -21,6 +21,9 @@ const volumi = await volumiInOrdine();
     <div class="elenco">
       {volumi.map((volume) => <SchedaVolume volume={volume} livello="h2" />)}
     </div>
+    <p class="introduzione in-preparazione">
+      In preparazione altri quaderni: la scuola, la casa, la cucina, le feste e altri giochi.
+    </p>
   </div>
 </Base>
 
@@ -31,6 +34,9 @@ const volumi = await volumiInOrdine();
   .introduzione {
     max-width: 40rem;
     margin-inline: auto;
+  }
+  .in-preparazione {
+    margin-top: 2.5rem;
   }
   .elenco {
     display: flex;
