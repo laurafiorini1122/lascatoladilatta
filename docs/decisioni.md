@@ -76,7 +76,7 @@
 - [x] Tamburello nel foglio Archivio di `Giochi_quattro_quaderni.xlsx`: segnato come usato per la pagina di prova del sito ed escluso dai quaderni. Controllato il 15 ottobre 2026.
 - [x] Creare il repository su GitHub e fare il primo push.
 - [x] Attivare GitHub Pages con origine "GitHub Actions".
-- [ ] Collegamenti Amazon dei due volumi, quando sono pubblicati. 28 ottobre 2026: link Amazon di Trecce e fiocchi nel sito; Calzoni corti in attesa.
+- [x] Collegamenti Amazon dei due volumi, quando sono pubblicati. 28 ottobre 2026: link Amazon di Trecce e fiocchi nel sito; Calzoni corti in attesa. 29 ottobre 2026: link Amazon di Calzoni corti nel sito; tutti e due i volumi sono in vendita.
 - [x] Comprare lascatoladilatta.it su Register.it e impostare i DNS, `public/CNAME`, `site` in `astro.config.mjs` e la verifica del dominio su GitHub.
 - [x] Inserire lascatoladilatta.it come dominio personalizzato nelle impostazioni Pages del repository e attivare "Enforce HTTPS" quando GitHub ha emesso il certificato. Fatto il 14 ottobre 2026.
 - [x] Attivare la casella info@lascatoladilatta.it su Register.it (12 ottobre 2026: casella creata nel pacchetto del dominio, 2 GB; la password l'ha scelta e inserita Laura). Server: IMAP pop.securemail.pro porta 993 SSL, SMTP authsmtp.securemail.pro porta 465 SSL, nome utente l'indirizzo completo; webmail su webmail.register.it.
